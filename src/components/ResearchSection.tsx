@@ -9,19 +9,33 @@ const flowchartSteps = [
   'Characterisation of all Input-Output Trajectories of the System',
 ];
 
-const AnimatedSinusoid = ({ id = "movingGradient" }: { id?: string }) => {
+const AnimatedSinusoid = ({ 
+  id = "movingGradient", 
+  color = "#fcd34d",
+  flipped = false 
+}: { 
+  id?: string; 
+  color?: string;
+  flipped?: boolean;
+}) => {
   return (
     <div className="py-4 flex flex-col items-center">
-      <svg width="120" height="80" viewBox="0 0 120 80" className="overflow-visible">
+      <svg 
+        width="120" 
+        height="80" 
+        viewBox="0 0 120 80" 
+        className="overflow-visible"
+        style={flipped ? { transform: 'scaleX(-1)' } : undefined}
+      >
         <defs>
           <linearGradient id={id} x1="0%" y1="0%" x2="0%" y2="100%" gradientUnits="userSpaceOnUse">
             <stop offset="0%" stopColor="transparent">
               <animate attributeName="offset" values="-0.35;1" dur="2.1s" repeatCount="indefinite" calcMode="linear" />
             </stop>
-            <stop offset="5%" stopColor="#fcd34d">
+            <stop offset="5%" stopColor={color}>
               <animate attributeName="offset" values="-0.30;1.05" dur="2.1s" repeatCount="indefinite" calcMode="linear" />
             </stop>
-            <stop offset="30%" stopColor="#fcd34d">
+            <stop offset="30%" stopColor={color}>
               <animate attributeName="offset" values="-0.05;1.30" dur="2.1s" repeatCount="indefinite" calcMode="linear" />
             </stop>
             <stop offset="35%" stopColor="transparent">
@@ -46,7 +60,7 @@ const DualSinusoid = () => {
   return (
     <div className="py-4 flex justify-center gap-8">
       <AnimatedSinusoid id="movingGradient2a" />
-      <AnimatedSinusoid id="movingGradient2b" />
+      <AnimatedSinusoid id="movingGradient2b" color="#4ade80" flipped />
     </div>
   );
 };
