@@ -280,7 +280,7 @@ const DualSinusoid = () => {
         </svg>
       </div>
       
-      {/* Triple green output cables (flipped) */}
+      {/* Five green output cables (flipped) */}
       <div className="flex flex-col items-center">
         <svg width="180" height="80" viewBox="0 0 180 80" className="overflow-visible">
           <defs>
@@ -302,10 +302,10 @@ const DualSinusoid = () => {
               <stop offset="0%" stopColor="transparent">
                 <animate attributeName="offset" values="-0.35;1" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
               </stop>
-              <stop offset="5%" stopColor="#2eb865">
+              <stop offset="5%" stopColor="#3bcc70">
                 <animate attributeName="offset" values="-0.30;1.05" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
               </stop>
-              <stop offset="30%" stopColor="#2eb865">
+              <stop offset="30%" stopColor="#3bcc70">
                 <animate attributeName="offset" values="-0.05;1.30" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
               </stop>
               <stop offset="35%" stopColor="transparent">
@@ -316,10 +316,38 @@ const DualSinusoid = () => {
               <stop offset="0%" stopColor="transparent">
                 <animate attributeName="offset" values="-0.35;1" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
               </stop>
-              <stop offset="5%" stopColor="#1a9e4f">
+              <stop offset="5%" stopColor="#2eb865">
                 <animate attributeName="offset" values="-0.30;1.05" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
               </stop>
-              <stop offset="30%" stopColor="#1a9e4f">
+              <stop offset="30%" stopColor="#2eb865">
+                <animate attributeName="offset" values="-0.05;1.30" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="35%" stopColor="transparent">
+                <animate attributeName="offset" values="0;1.35" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+            </linearGradient>
+            <linearGradient id="movingGradient2b4" x1="0%" y1="0%" x2="0%" y2="100%" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="transparent">
+                <animate attributeName="offset" values="-0.35;1" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="5%" stopColor="#22a555">
+                <animate attributeName="offset" values="-0.30;1.05" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="30%" stopColor="#22a555">
+                <animate attributeName="offset" values="-0.05;1.30" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="35%" stopColor="transparent">
+                <animate attributeName="offset" values="0;1.35" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+            </linearGradient>
+            <linearGradient id="movingGradient2b5" x1="0%" y1="0%" x2="0%" y2="100%" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="transparent">
+                <animate attributeName="offset" values="-0.35;1" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="5%" stopColor="#1a9245">
+                <animate attributeName="offset" values="-0.30;1.05" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="30%" stopColor="#1a9245">
                 <animate attributeName="offset" values="-0.05;1.30" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
               </stop>
               <stop offset="35%" stopColor="transparent">
@@ -339,9 +367,11 @@ const DualSinusoid = () => {
           </text>
           
           <g style={{ transform: 'scaleX(-1)', transformOrigin: 'center' }}>
-            <path d="M85 0 C85 5, 85 8, 85 10 C60 15, 60 25, 85 30 C110 35, 110 45, 85 50 C60 55, 60 65, 85 70 C85 72, 85 75, 85 80" stroke="url(#movingGradient2b1)" strokeWidth="3" fill="none" strokeLinecap="round" />
-            <path d="M90 0 C90 5, 90 8, 90 10 C65 15, 65 25, 90 30 C115 35, 115 45, 90 50 C65 55, 65 65, 90 70 C90 72, 90 75, 90 80" stroke="url(#movingGradient2b2)" strokeWidth="3" fill="none" strokeLinecap="round" />
-            <path d="M95 0 C95 5, 95 8, 95 10 C70 15, 70 25, 95 30 C120 35, 120 45, 95 50 C70 55, 70 65, 95 70 C95 72, 95 75, 95 80" stroke="url(#movingGradient2b3)" strokeWidth="3" fill="none" strokeLinecap="round" />
+            <path d="M83 0 C83 5, 83 8, 83 10 C58 15, 58 25, 83 30 C108 35, 108 45, 83 50 C58 55, 58 65, 83 70 C83 72, 83 75, 83 80" stroke="url(#movingGradient2b1)" strokeWidth="3" fill="none" strokeLinecap="round" />
+            <path d="M87 0 C87 5, 87 8, 87 10 C62 15, 62 25, 87 30 C112 35, 112 45, 87 50 C62 55, 62 65, 87 70 C87 72, 87 75, 87 80" stroke="url(#movingGradient2b2)" strokeWidth="3" fill="none" strokeLinecap="round" />
+            <path d="M91 0 C91 5, 91 8, 91 10 C66 15, 66 25, 91 30 C116 35, 116 45, 91 50 C66 55, 66 65, 91 70 C91 72, 91 75, 91 80" stroke="url(#movingGradient2b3)" strokeWidth="3" fill="none" strokeLinecap="round" />
+            <path d="M95 0 C95 5, 95 8, 95 10 C70 15, 70 25, 95 30 C120 35, 120 45, 95 50 C70 55, 70 65, 95 70 C95 72, 95 75, 95 80" stroke="url(#movingGradient2b4)" strokeWidth="3" fill="none" strokeLinecap="round" />
+            <path d="M99 0 C99 5, 99 8, 99 10 C74 15, 74 25, 99 30 C124 35, 124 45, 99 50 C74 55, 74 65, 99 70 C99 72, 99 75, 99 80" stroke="url(#movingGradient2b5)" strokeWidth="3" fill="none" strokeLinecap="round" />
           </g>
         </svg>
       </div>
