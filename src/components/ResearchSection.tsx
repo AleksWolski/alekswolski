@@ -28,19 +28,19 @@ const ResearchSection = () => {
         </div>
 
         {/* Research areas grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div className="mb-20">
           {researchAreas.map((area) => (
             <div
               key={area.title}
-              className="group p-6 rounded-lg bg-card border border-border hover:border-primary/30 transition-all duration-300"
+              className="group p-10 md:p-14 rounded-lg bg-card border border-border hover:border-primary/30 transition-all duration-300"
             >
-              <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center mb-5">
-                <area.icon className="text-primary" size={20} />
+              <div className="w-14 h-14 rounded-md bg-primary/10 flex items-center justify-center mb-8">
+                <area.icon className="text-primary" size={28} />
               </div>
-              <h3 className="font-display font-medium text-lg mb-3">
+              <h3 className="font-display font-medium text-2xl md:text-3xl mb-5">
                 {area.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl">
                 {area.description}
               </p>
             </div>
