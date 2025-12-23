@@ -31,8 +31,8 @@ const HeroSection = () => {
                   Get in Touch
                 </a>
               </Button>
-              <Button variant="heroOutline" size="lg">
-                View Publications
+              <Button variant="heroOutline" size="lg" asChild>
+                <a href="#portfolio">View Publications</a>
               </Button>
             </div>
 
