@@ -31,9 +31,9 @@ const TrackingAnimation = () => {
   }, []);
 
   // Animation parameters
-  const frequency = 10; // Number of wave cycles in full signal
-  const initialAmplitude = 90; // Starting amplitude in pixels
-  const dampingFactor = 6; // Higher = converges faster
+  const frequency = 12; // Number of wave cycles in full signal
+  const initialAmplitude = 80; // Starting amplitude in pixels
+  const dampingFactor = 12; // Higher = converges faster
   
   const { width, height } = dimensions;
   const centerX = width / 2;
