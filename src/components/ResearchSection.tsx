@@ -15,19 +15,19 @@ const AnimatedSinusoid = () => {
       <svg width="120" height="80" viewBox="0 0 120 80" className="overflow-visible">
         <defs>
           <linearGradient id="movingGradient" x1="0%" y1="0%" x2="0%" y2="100%" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#f97316">
+            <stop offset="0%" stopColor="transparent">
               <animate attributeName="offset" values="-1;1" dur="2s" repeatCount="indefinite" />
             </stop>
             <stop offset="25%" stopColor="#fed7aa">
               <animate attributeName="offset" values="-0.75;1.25" dur="2s" repeatCount="indefinite" />
             </stop>
-            <stop offset="50%" stopColor="#f97316">
+            <stop offset="50%" stopColor="transparent">
               <animate attributeName="offset" values="-0.5;1.5" dur="2s" repeatCount="indefinite" />
             </stop>
             <stop offset="75%" stopColor="#fed7aa">
               <animate attributeName="offset" values="-0.25;1.75" dur="2s" repeatCount="indefinite" />
             </stop>
-            <stop offset="100%" stopColor="#f97316">
+            <stop offset="100%" stopColor="transparent">
               <animate attributeName="offset" values="0;2" dur="2s" repeatCount="indefinite" />
             </stop>
           </linearGradient>
