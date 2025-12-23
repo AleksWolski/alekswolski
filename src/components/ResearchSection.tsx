@@ -434,16 +434,16 @@ const MatrixWithCables = () => {
             gradientUnits="userSpaceOnUse"
           >
             <stop offset="0%" stopColor="transparent">
-              <animate attributeName="offset" values="-0.35;1" dur="5s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              <animate attributeName="offset" values="-0.35;0.65" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
             </stop>
             <stop offset="5%" stopColor="#fcd34d">
-              <animate attributeName="offset" values="-0.30;1.05" dur="5s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              <animate attributeName="offset" values="-0.30;0.70" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
             </stop>
             <stop offset="30%" stopColor="#fcd34d">
-              <animate attributeName="offset" values="-0.05;1.30" dur="5s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              <animate attributeName="offset" values="-0.05;0.95" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
             </stop>
             <stop offset="35%" stopColor="transparent">
-              <animate attributeName="offset" values="0;1.35" dur="5s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              <animate attributeName="offset" values="0;1" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
             </stop>
           </linearGradient>
         </defs>
