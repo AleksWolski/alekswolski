@@ -71,16 +71,6 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in-up animation-delay-800">
-          <a
-            href="#about"
-            className="flex flex-col items-center text-muted-foreground hover:text-foreground transition-colors duration-200"
-          >
-            <span className="text-xs font-display tracking-wider uppercase mb-2">Explore</span>
-            <ArrowDown size={16} />
-          </a>
-        </div>
       </div>
     </section>
   );
