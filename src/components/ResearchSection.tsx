@@ -188,7 +188,7 @@ const TripleSinusoid = () => {
         
         {/* Three bundled sinusoidal paths */}
         <path
-          d="M85 0 C85 5, 85 8, 85 10 C60 15, 60 25, 85 30 C110 35, 110 45, 85 50 C60 55, 60 65, 85 70 C85 72, 85 75, 85 80"
+          d="M82 0 C82 5, 82 8, 82 10 C57 15, 57 25, 82 30 C107 35, 107 45, 82 50 C57 55, 57 65, 82 70 C82 72, 82 75, 82 80"
           stroke="url(#movingGradient0a)"
           strokeWidth="3"
           fill="none"
@@ -202,7 +202,7 @@ const TripleSinusoid = () => {
           strokeLinecap="round"
         />
         <path
-          d="M95 0 C95 5, 95 8, 95 10 C70 15, 70 25, 95 30 C120 35, 120 45, 95 50 C70 55, 70 65, 95 70 C95 72, 95 75, 95 80"
+          d="M98 0 C98 5, 98 8, 98 10 C73 15, 73 25, 98 30 C123 35, 123 45, 98 50 C73 55, 73 65, 98 70 C98 72, 98 75, 98 80"
           stroke="url(#movingGradient0c)"
           strokeWidth="3"
           fill="none"
