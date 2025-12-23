@@ -127,10 +127,10 @@ const TripleSinusoid = () => {
             <stop offset="0%" stopColor="transparent">
               <animate attributeName="offset" values="-0.35;1" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
             </stop>
-            <stop offset="5%" stopColor="#fcd34d">
+            <stop offset="5%" stopColor="#e0b82e">
               <animate attributeName="offset" values="-0.30;1.05" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
             </stop>
-            <stop offset="30%" stopColor="#fcd34d">
+            <stop offset="30%" stopColor="#e0b82e">
               <animate attributeName="offset" values="-0.05;1.30" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
             </stop>
             <stop offset="35%" stopColor="transparent">
@@ -141,10 +141,10 @@ const TripleSinusoid = () => {
             <stop offset="0%" stopColor="transparent">
               <animate attributeName="offset" values="-0.35;1" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
             </stop>
-            <stop offset="5%" stopColor="#fcd34d">
+            <stop offset="5%" stopColor="#c49e1a">
               <animate attributeName="offset" values="-0.30;1.05" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
             </stop>
-            <stop offset="30%" stopColor="#fcd34d">
+            <stop offset="30%" stopColor="#c49e1a">
               <animate attributeName="offset" values="-0.05;1.30" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
             </stop>
             <stop offset="35%" stopColor="transparent">
