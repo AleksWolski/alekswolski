@@ -52,10 +52,10 @@ const AnimatedSinusoid = ({
           <g>
             <defs>
               <clipPath id={`${id}-clip`}>
-                <rect x="0" y="0" width="180" height="0">
+                <rect x="-50" y="0" width="250" height="0">
                   <animate 
                     attributeName="y" 
-                    values="-30;80" 
+                    values="-35;80" 
                     dur="3s" 
                     repeatCount="indefinite" 
                     calcMode="linear"
@@ -63,7 +63,7 @@ const AnimatedSinusoid = ({
                   />
                   <animate 
                     attributeName="height" 
-                    values="30;30" 
+                    values="35;35" 
                     dur="3s" 
                     repeatCount="indefinite" 
                     calcMode="linear"
@@ -73,7 +73,7 @@ const AnimatedSinusoid = ({
               </clipPath>
             </defs>
             <text 
-              x={labelPosition === "left" ? "25" : "155"} 
+              x={labelPosition === "left" ? "35" : "145"} 
               y="45" 
               fill={color}
               fontSize="14"
