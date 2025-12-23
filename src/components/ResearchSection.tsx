@@ -9,12 +9,12 @@ const flowchartSteps = [
   'Characterisation of all Input-Output Trajectories of the System',
 ];
 
-const AnimatedSinusoid = () => {
+const AnimatedSinusoid = ({ id = "movingGradient" }: { id?: string }) => {
   return (
     <div className="py-4 flex flex-col items-center">
       <svg width="120" height="80" viewBox="0 0 120 80" className="overflow-visible">
         <defs>
-          <linearGradient id="movingGradient" x1="0%" y1="0%" x2="0%" y2="100%" gradientUnits="userSpaceOnUse">
+          <linearGradient id={id} x1="0%" y1="0%" x2="0%" y2="100%" gradientUnits="userSpaceOnUse">
             <stop offset="0%" stopColor="transparent">
               <animate attributeName="offset" values="0;1" dur="2.1s" repeatCount="indefinite" calcMode="linear" />
             </stop>
@@ -32,12 +32,21 @@ const AnimatedSinusoid = () => {
         {/* Static sinusoidal path */}
         <path
           d="M60 0 C60 5, 60 8, 60 10 C35 15, 35 25, 60 30 C85 35, 85 45, 60 50 C35 55, 35 65, 60 70 C60 72, 60 75, 60 80"
-          stroke="url(#movingGradient)"
+          stroke={`url(#${id})`}
           strokeWidth="3"
           fill="none"
           strokeLinecap="round"
         />
       </svg>
+    </div>
+  );
+};
+
+const DualSinusoid = () => {
+  return (
+    <div className="py-4 flex justify-center gap-8">
+      <AnimatedSinusoid id="movingGradient2a" />
+      <AnimatedSinusoid id="movingGradient2b" />
     </div>
   );
 };
@@ -81,7 +90,9 @@ const ResearchSection = () => {
                   </div>
                   {index < flowchartSteps.length - 1 && (
                     index === 0 ? (
-                      <AnimatedSinusoid />
+                      <AnimatedSinusoid id="movingGradient1" />
+                    ) : index === 1 ? (
+                      <DualSinusoid />
                     ) : (
                       <div className="py-6">
                         <ArrowDown className="text-primary" size={28} />
