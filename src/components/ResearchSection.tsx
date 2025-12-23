@@ -26,35 +26,34 @@ const researchAreas = [
 
 const ResearchSection = () => {
   return (
-    <section id="research" className="py-24 relative">
-      <div className="absolute inset-0 grid-pattern opacity-10" />
-      
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <p className="text-primary font-display font-medium mb-4 tracking-wider uppercase text-sm">
+    <section id="research" className="py-28 relative">
+      <div className="container mx-auto px-6">
+        {/* Section header */}
+        <div className="text-center mb-20">
+          <p className="text-primary font-body font-medium mb-4 tracking-widest uppercase text-xs">
             Research Focus
           </p>
-          <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl mb-6">
-            Exploring the Intersection of{' '}
-            <span className="text-gradient">Data & Dynamics</span>
+          <h2 className="font-display text-3xl md:text-4xl mb-6">
+            Exploring the Intersection of <br className="hidden md:block" />
+            <span className="text-gradient italic">Data & Dynamics</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             My research bridges the gap between classical control theory and modern 
             data-driven approaches, enabling direct analysis and design from experimental data.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {researchAreas.map((area, index) => (
+        {/* Research areas grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+          {researchAreas.map((area) => (
             <div
               key={area.title}
-              className="group p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 card-shadow"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="group p-6 rounded-lg bg-card border border-border hover:border-primary/30 transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                <area.icon className="text-primary" size={24} />
+              <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center mb-5">
+                <area.icon className="text-primary" size={20} />
               </div>
-              <h3 className="font-display font-semibold text-lg mb-3 group-hover:text-primary transition-colors">
+              <h3 className="font-display text-lg mb-3">
                 {area.title}
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
@@ -64,51 +63,53 @@ const ResearchSection = () => {
           ))}
         </div>
 
-        {/* Visual representation of LTI system */}
-        <div className="mt-20 p-8 rounded-2xl bg-card border border-border card-shadow">
-          <div className="flex flex-col lg:flex-row items-center gap-8">
+        {/* LTI System representation */}
+        <div className="max-w-4xl mx-auto p-8 md:p-10 rounded-lg bg-card border border-border">
+          <div className="flex flex-col lg:flex-row items-center gap-10">
             <div className="flex-1">
-              <h3 className="font-display font-semibold text-2xl mb-4">
+              <h3 className="font-display text-2xl mb-4">
                 Continuous-Time LTI Systems
               </h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-5">
                 The fundamental behavior of linear time-invariant systems is described by 
-                differential equations of the form:
+                state-space equations:
               </p>
-              <div className="bg-secondary/50 rounded-lg p-4 font-mono text-sm">
-                <span className="text-primary">ẋ(t)</span> = <span className="text-accent">A</span>x(t) + <span className="text-accent">B</span>u(t)
-                <br />
-                <span className="text-primary">y(t)</span> = <span className="text-accent">C</span>x(t) + <span className="text-accent">D</span>u(t)
+              <div className="bg-secondary/50 rounded-md p-5 font-mono text-sm border border-border">
+                <div className="mb-2">
+                  <span className="text-primary">ẋ</span>(t) = <span className="text-foreground/80">A</span>x(t) + <span className="text-foreground/80">B</span>u(t)
+                </div>
+                <div>
+                  <span className="text-primary">y</span>(t) = <span className="text-foreground/80">C</span>x(t) + <span className="text-foreground/80">D</span>u(t)
+                </div>
               </div>
-              <p className="text-muted-foreground text-sm mt-4">
-                My work focuses on reconstructing and utilizing these relationships 
-                directly from measured input-output data.
+              <p className="text-muted-foreground text-sm mt-5">
+                My work focuses on reconstructing these relationships directly from measured input-output data.
               </p>
             </div>
             
             {/* System diagram */}
             <div className="flex-1 flex justify-center">
-              <svg viewBox="0 0 300 150" className="w-full max-w-sm">
+              <svg viewBox="0 0 280 130" className="w-full max-w-xs">
                 <defs>
-                  <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                    <polygon points="0 0, 10 3.5, 0 7" fill="hsl(186 100% 50%)" />
+                  <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                    <polygon points="0 0, 8 3, 0 6" fill="hsl(38 65% 50%)" />
                   </marker>
                 </defs>
                 
                 {/* Input arrow */}
-                <line x1="20" y1="75" x2="70" y2="75" stroke="hsl(186 100% 50%)" strokeWidth="2" markerEnd="url(#arrowhead)" />
-                <text x="45" y="65" fill="hsl(186 100% 50%)" fontSize="12" textAnchor="middle" fontFamily="monospace">u(t)</text>
+                <line x1="10" y1="65" x2="55" y2="65" stroke="hsl(38 65% 50%)" strokeWidth="1.5" markerEnd="url(#arrowhead)" />
+                <text x="32" y="55" fill="hsl(38 65% 50%)" fontSize="11" textAnchor="middle" fontFamily="monospace">u(t)</text>
                 
                 {/* System block */}
-                <rect x="80" y="50" width="140" height="50" rx="8" fill="hsl(217 33% 17%)" stroke="hsl(186 100% 50%)" strokeWidth="2" />
-                <text x="150" y="80" fill="hsl(210 40% 98%)" fontSize="14" textAnchor="middle" fontFamily="var(--font-display)">LTI System</text>
+                <rect x="65" y="40" width="150" height="50" rx="4" fill="hsl(220 20% 14%)" stroke="hsl(220 20% 18%)" strokeWidth="1.5" />
+                <text x="140" y="70" fill="hsl(40 15% 95%)" fontSize="13" textAnchor="middle" fontFamily="var(--font-display)">LTI System</text>
                 
                 {/* Output arrow */}
-                <line x1="230" y1="75" x2="280" y2="75" stroke="hsl(186 100% 50%)" strokeWidth="2" markerEnd="url(#arrowhead)" />
-                <text x="255" y="65" fill="hsl(186 100% 50%)" fontSize="12" textAnchor="middle" fontFamily="monospace">y(t)</text>
+                <line x1="225" y1="65" x2="270" y2="65" stroke="hsl(38 65% 50%)" strokeWidth="1.5" markerEnd="url(#arrowhead)" />
+                <text x="248" y="55" fill="hsl(38 65% 50%)" fontSize="11" textAnchor="middle" fontFamily="monospace">y(t)</text>
                 
-                {/* Feedback path (dashed) */}
-                <path d="M240,75 L240,120 L60,120 L60,75" fill="none" stroke="hsl(186 80% 42%)" strokeWidth="1.5" strokeDasharray="5,5" opacity="0.5" />
+                {/* Feedback path */}
+                <path d="M235,65 L235,110 L45,110 L45,65" fill="none" stroke="hsl(220 20% 30%)" strokeWidth="1" strokeDasharray="4,4" />
               </svg>
             </div>
           </div>
