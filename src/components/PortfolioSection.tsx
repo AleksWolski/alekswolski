@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, FileText, Calendar } from 'lucide-react';
+import { ExternalLink, FileText, Calendar, GraduationCap } from 'lucide-react';
 
 const publications = [
   {
@@ -109,9 +109,16 @@ const PortfolioSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="hero" size="lg">
-            View All Publications
-          </Button>
+          <a 
+            href="https://scholar.google.com/citations?user=0Jq6nvIAAAAJ&hl=en" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <Button variant="hero" size="lg" className="gap-2">
+              <GraduationCap size={18} />
+              View All Publications
+            </Button>
+          </a>
         </div>
       </div>
     </section>
