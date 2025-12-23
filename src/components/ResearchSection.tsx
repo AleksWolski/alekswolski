@@ -3,7 +3,7 @@ import { ArrowDown } from 'lucide-react';
 
 const flowchartSteps = [
   'Persistently Exciting Input',
-  'LTI CT System',
+  'Linear Time-Invariant Continuous-Time System',
   'Sufficiently Informative Input-Output Trajectory',
   'Data Matrix',
   'Characterisation of all Input-Output Trajectories of the System',
