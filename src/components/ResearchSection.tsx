@@ -417,61 +417,114 @@ const MatrixWithCables = () => {
         </svg>
       </div>
       
-      {/* Cable bundle - sin(t) + sin(2t) wave pattern */}
-      <svg 
-        width="100" 
-        height="54" 
-        viewBox="0 0 100 54" 
-        className="ml-2"
-      >
-        <defs>
-          <linearGradient 
-            id="cableBundleGradient" 
-            x1="0%" 
-            y1="0%" 
-            x2="100%" 
-            y2="0%" 
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop offset="0%" stopColor="transparent">
-              <animate attributeName="offset" values="-0.35;0.65" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
-            </stop>
-            <stop offset="5%" stopColor="#fcd34d">
-              <animate attributeName="offset" values="-0.30;0.70" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
-            </stop>
-            <stop offset="30%" stopColor="#fcd34d">
-              <animate attributeName="offset" values="-0.05;0.95" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
-            </stop>
-            <stop offset="35%" stopColor="transparent">
-              <animate attributeName="offset" values="0;1" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
-            </stop>
-          </linearGradient>
-        </defs>
+      {/* Cable bundles container */}
+      <div className="flex flex-col ml-2">
+        {/* Red cable bundle - 3 cables with sin(t) + sin(2t) wave pattern */}
+        <svg 
+          width="100" 
+          height="35" 
+          viewBox="0 0 100 35" 
+        >
+          <defs>
+            <linearGradient 
+              id="redCableGradient" 
+              x1="0%" 
+              y1="0%" 
+              x2="100%" 
+              y2="0%" 
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0%" stopColor="transparent">
+                <animate attributeName="offset" values="-0.35;0.65" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="5%" stopColor="#ef4444">
+                <animate attributeName="offset" values="-0.30;0.70" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="30%" stopColor="#ef4444">
+                <animate attributeName="offset" values="-0.05;0.95" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="35%" stopColor="transparent">
+                <animate attributeName="offset" values="0;1" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+            </linearGradient>
+          </defs>
+          
+          {[0, 1, 2].map((i) => {
+            const baseY = 10 + i * 7;
+            const amplitude = 5;
+            const points: string[] = [];
+            for (let x = 0; x <= 90; x += 2) {
+              const t = (x / 90) * Math.PI * 2;
+              const y = baseY + amplitude * (Math.sin(t) + Math.sin(2 * t)) / 2;
+              points.push(`${x},${y}`);
+            }
+            return (
+              <polyline
+                key={i}
+                points={points.join(' ')}
+                stroke="url(#redCableGradient)"
+                strokeWidth="3"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            );
+          })}
+        </svg>
         
-        {/* 3 cables with sin(t) + sin(2t) wave pattern */}
-        {[0, 1, 2].map((i) => {
-          const baseY = 20 + i * 7;
-          const amplitude = 6;
-          // Generate path points for sin(t) + sin(2t)
-          const points: string[] = [];
-          for (let x = 0; x <= 90; x += 2) {
-            const t = (x / 90) * Math.PI * 2;
-            const y = baseY + amplitude * (Math.sin(t) + Math.sin(2 * t)) / 2;
-            points.push(`${x},${y}`);
-          }
-          return (
-            <polyline
-              key={i}
-              points={points.join(' ')}
-              stroke="url(#cableBundleGradient)"
-              strokeWidth="3"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          );
-        })}
-      </svg>
+        {/* Blue cable bundle - 5 cables with sin(t) + sin(2t) wave pattern */}
+        <svg 
+          width="100" 
+          height="45" 
+          viewBox="0 0 100 45" 
+        >
+          <defs>
+            <linearGradient 
+              id="blueCableGradient" 
+              x1="0%" 
+              y1="0%" 
+              x2="100%" 
+              y2="0%" 
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0%" stopColor="transparent">
+                <animate attributeName="offset" values="-0.35;0.65" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="5%" stopColor="#3b82f6">
+                <animate attributeName="offset" values="-0.30;0.70" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="30%" stopColor="#3b82f6">
+                <animate attributeName="offset" values="-0.05;0.95" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="35%" stopColor="transparent">
+                <animate attributeName="offset" values="0;1" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+            </linearGradient>
+          </defs>
+          
+          {[0, 1, 2, 3, 4].map((i) => {
+            const baseY = 8 + i * 7;
+            const amplitude = 5;
+            const points: string[] = [];
+            for (let x = 0; x <= 90; x += 2) {
+              const t = (x / 90) * Math.PI * 2;
+              const y = baseY + amplitude * (Math.sin(t) + Math.sin(2 * t)) / 2;
+              points.push(`${x},${y}`);
+            }
+            return (
+              <polyline
+                key={i}
+                points={points.join(' ')}
+                stroke="url(#blueCableGradient)"
+                strokeWidth="3"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            );
+          })}
+        </svg>
+      </div>
     </div>
   );
 };
