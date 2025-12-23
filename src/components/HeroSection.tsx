@@ -25,9 +25,11 @@ const HeroSection = () => {
             </p>
 
             <div className="opacity-0 animate-fade-in-up animation-delay-600 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="hero" size="lg">
-                <Mail size={18} />
-                Get in Touch
+              <Button variant="hero" size="lg" asChild>
+                <a href="#contact">
+                  <Mail size={18} />
+                  Get in Touch
+                </a>
               </Button>
               <Button variant="heroOutline" size="lg">
                 View Publications
