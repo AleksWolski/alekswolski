@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { GraduationCap, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -12,21 +12,25 @@ const Footer = () => {
           
           <div className="flex items-center gap-5">
             <a 
-              href="#" 
+              href="https://scholar.google.com/citations?user=0Jq6nvIAAAAJ&hl=en" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
-              aria-label="GitHub"
+              aria-label="Google Scholar"
             >
-              <Github size={16} />
+              <GraduationCap size={16} />
             </a>
             <a 
-              href="#" 
+              href="https://www.linkedin.com/in/aleks-wolski/" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
               aria-label="LinkedIn"
             >
               <Linkedin size={16} />
             </a>
             <a 
-              href="#" 
+              href="mailto:ajw2g20@soton.ac.uk" 
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
               aria-label="Email"
             >
