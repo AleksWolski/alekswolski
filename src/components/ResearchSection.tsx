@@ -417,11 +417,11 @@ const MatrixWithCables = () => {
         </svg>
       </div>
       
-      {/* Cable bundle - rotated 90 degrees, pointing right */}
+      {/* Cable bundle - sin(t) + sin(2t) wave pattern */}
       <svg 
-        width="80" 
+        width="100" 
         height="54" 
-        viewBox="0 0 80 54" 
+        viewBox="0 0 100 54" 
         className="ml-2"
       >
         <defs>
@@ -448,17 +448,26 @@ const MatrixWithCables = () => {
           </linearGradient>
         </defs>
         
-        {/* 3 cables going horizontally to the right */}
+        {/* 3 cables with sin(t) + sin(2t) wave pattern */}
         {[0, 1, 2].map((i) => {
-          const y = 20 + i * 7;
+          const baseY = 20 + i * 7;
+          const amplitude = 6;
+          // Generate path points for sin(t) + sin(2t)
+          const points: string[] = [];
+          for (let x = 0; x <= 90; x += 2) {
+            const t = (x / 90) * Math.PI * 2;
+            const y = baseY + amplitude * (Math.sin(t) + Math.sin(2 * t)) / 2;
+            points.push(`${x},${y}`);
+          }
           return (
-            <path
+            <polyline
               key={i}
-              d={`M0 ${y} C 20 ${y}, 40 ${y}, 70 ${y}`}
+              points={points.join(' ')}
               stroke="url(#cableBundleGradient)"
               strokeWidth="3"
               fill="none"
               strokeLinecap="round"
+              strokeLinejoin="round"
             />
           );
         })}
