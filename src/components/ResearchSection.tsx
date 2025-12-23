@@ -1,12 +1,12 @@
 import React from 'react';
-import { Database } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 
-const researchAreas = [
-  {
-    icon: Database,
-    title: 'Data-Driven Simulation',
-    description: 'Developing methods to simulate system behavior directly from measured data without explicit model identification.',
-  },
+const flowchartSteps = [
+  'Persistently Exciting Input',
+  'LTI CT System',
+  'Sufficiently Informative Input-Output Trajectory',
+  'Data Matrix',
+  'Characterisation of all Input-Output Trajectories of the System',
 ];
 
 const ResearchSection = () => {
@@ -27,21 +27,34 @@ const ResearchSection = () => {
           </p>
         </div>
 
-        {/* Research areas grid */}
+        {/* Research block */}
         <div className="mb-20">
-          {researchAreas.map((area) => (
-            <div
-              key={area.title}
-              className="group p-10 md:p-14 rounded-lg bg-card border border-border hover:border-primary/30 transition-all duration-300"
-            >
-              <h3 className="font-display font-medium text-2xl md:text-3xl mb-5">
-                {area.title}
-              </h3>
-              <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl">
-                {area.description}
-              </p>
+          <div className="group p-10 md:p-14 rounded-lg bg-card border border-border hover:border-primary/30 transition-all duration-300">
+            <h3 className="font-display font-medium text-2xl md:text-3xl mb-5">
+              Data-Driven Simulation
+            </h3>
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-12">
+              Developing methods to simulate system behavior directly from measured data without explicit model identification.
+            </p>
+
+            {/* Flowchart */}
+            <div className="flex flex-col items-center gap-0">
+              {flowchartSteps.map((step, index) => (
+                <React.Fragment key={step}>
+                  <div className="w-full max-w-md px-6 py-4 bg-primary/10 border border-primary/20 rounded-lg text-center">
+                    <span className="text-foreground font-medium text-sm md:text-base">
+                      {step}
+                    </span>
+                  </div>
+                  {index < flowchartSteps.length - 1 && (
+                    <div className="py-2">
+                      <ArrowDown className="text-primary" size={24} />
+                    </div>
+                  )}
+                </React.Fragment>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
