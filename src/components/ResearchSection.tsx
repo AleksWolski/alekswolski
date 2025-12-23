@@ -382,17 +382,17 @@ const MatrixDisplay = () => {
       </div>
       
       {/* 3x3 Matrix with full-height brackets */}
-      <div className="flex justify-center items-stretch">
-        <svg width="12" height="60" viewBox="0 0 12 60" className="text-primary">
-          <path d="M10 2 L4 2 L4 58 L10 58" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      <div className="flex justify-center items-center">
+        <svg width="10" height="54" viewBox="0 0 10 54" className="text-primary flex-shrink-0">
+          <path d="M8 2 L3 2 L3 52 L8 52" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
-        <div className="grid grid-cols-3 gap-x-4 gap-y-2 px-2 py-2">
+        <div className="grid grid-cols-3 gap-x-3 gap-y-1 px-1">
           {Array.from({ length: 9 }).map((_, i) => (
-            <span key={i} className="text-primary text-center text-lg">•</span>
+            <span key={i} className="text-primary text-center text-base leading-4 w-4 h-4 flex items-center justify-center">•</span>
           ))}
         </div>
-        <svg width="12" height="60" viewBox="0 0 12 60" className="text-primary">
-          <path d="M2 2 L8 2 L8 58 L2 58" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        <svg width="10" height="54" viewBox="0 0 10 54" className="text-primary flex-shrink-0">
+          <path d="M2 2 L7 2 L7 52 L2 52" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </div>
     </div>
