@@ -456,7 +456,8 @@ const MatrixWithCables = () => {
         {[0, 1, 2].map((i) => {
           const startY = 47 + (i - 1) * 8; // Tighter bundle spacing
           const endY = 110;
-          const endX = 225 + (i - 1) * 5; // Slight spread at end
+          // Reversed: top cable (i=0) ends leftmost, bottom cable (i=2) ends rightmost
+          const endX = 225 + (1 - i) * 5;
           return (
             <path
               key={i}
