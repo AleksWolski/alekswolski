@@ -402,32 +402,20 @@ const MatrixDisplay = () => {
 const MatrixWithCables = () => {
   return (
     <div className="py-6 flex justify-center items-center relative">
-      <svg 
-        width="100" 
-        height="60" 
-        viewBox="0 0 100 60" 
-        className="overflow-visible"
-      >
-        {/* Matrix - centered */}
-        <g transform="translate(10, 2)">
-          {/* Left bracket */}
-          <path d="M8 2 L3 2 L3 52 L8 52" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-          
-          {/* Dots grid */}
-          {Array.from({ length: 9 }).map((_, i) => {
-            const row = Math.floor(i / 3);
-            const col = i % 3;
-            const x = 18 + col * 18;
-            const y = 14 + row * 14;
-            return (
-              <text key={i} x={x} y={y} fill="hsl(var(--primary))" fontSize="14" textAnchor="middle" dominantBaseline="middle">•</text>
-            );
-          })}
-          
-          {/* Right bracket */}
-          <path d="M72 2 L77 2 L77 52 L72 52" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-        </g>
-      </svg>
+      {/* 3x3 Matrix with full-height brackets - matching MatrixDisplay */}
+      <div className="flex justify-center items-center">
+        <svg width="10" height="54" viewBox="0 0 10 54" className="text-primary flex-shrink-0">
+          <path d="M8 2 L3 2 L3 52 L8 52" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+        <div className="grid grid-cols-3 gap-x-3 gap-y-1 px-1">
+          {Array.from({ length: 9 }).map((_, i) => (
+            <span key={i} className="text-primary text-center text-base leading-4 w-4 h-4 flex items-center justify-center">•</span>
+          ))}
+        </div>
+        <svg width="10" height="54" viewBox="0 0 10 54" className="text-primary flex-shrink-0">
+          <path d="M2 2 L7 2 L7 52 L2 52" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </div>
     </div>
   );
 };
