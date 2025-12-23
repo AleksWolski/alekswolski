@@ -376,8 +376,10 @@ const DualSinusoid = ({ showLabels = true }: { showLabels?: boolean }) => {
 const MatrixDisplay = () => {
   return (
     <div className="py-4 flex flex-col items-center">
-      {/* Cable bundles above matrix */}
-      <DualSinusoid showLabels={false} />
+      {/* Cable bundles above matrix - cropped to half height */}
+      <div className="h-[50px] overflow-hidden">
+        <DualSinusoid showLabels={false} />
+      </div>
       
       {/* 3x3 Matrix with full-height brackets */}
       <div className="flex justify-center items-stretch">
