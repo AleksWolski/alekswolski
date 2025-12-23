@@ -37,7 +37,7 @@ const publications = [
     year: "2024",
     abstract:
       "We present some preliminary ideas on a data-driven Model Predictive Control framework for continuous-time systems. We use Chebyshev polynomial orthogonal bases to represent system trajectories and subsequently develop a data-driven continuous-time version of the classical Model Predictive Control algorithm. We investigate the effects of the parameters in our framework with two numerical examples and draw comparison to model-driven MPC schemes.",
-    tags: ["Model Prective Control", "Data-Driven Control"],
+    tags: ["Model Predictive Control", "Data-Driven Control"],
     link: "https://ieeexplore.ieee.org/abstract/document/10886618",
   },
 ];
