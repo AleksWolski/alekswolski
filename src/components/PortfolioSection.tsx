@@ -64,10 +64,19 @@ const PublicationCard = ({ pub }: { pub: typeof publications[0] }) => {
 
   useEffect(() => {
     const el = textRef.current;
-    if (el) {
+    if (!el) return;
+
+    const checkClamped = () => {
       setIsClamped(el.scrollHeight > el.clientHeight);
-    }
-  }, [pub.abstract]);
+    };
+
+    checkClamped();
+
+    const resizeObserver = new ResizeObserver(checkClamped);
+    resizeObserver.observe(el);
+
+    return () => resizeObserver.disconnect();
+  }, [pub.abstract, expanded]);
 
   return (
     <article className="group p-6 md:p-8 rounded-lg bg-background border border-border hover:border-primary/20 transition-all duration-300">
