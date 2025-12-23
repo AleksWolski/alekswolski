@@ -6,7 +6,7 @@ import portrait from "@/assets/portrait.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <ControlTheoryBackground />
 
       <div className="container mx-auto px-6 relative z-10">
