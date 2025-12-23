@@ -106,7 +106,7 @@ const AnimatedSinusoid = ({
 
 const DualSinusoid = () => {
   return (
-    <div className="py-4 flex justify-center gap-8">
+    <div className="py-4 flex justify-center gap-6">
       <AnimatedSinusoid id="movingGradient2a" label="Inputs" />
       <AnimatedSinusoid id="movingGradient2b" color="#4ade80" flipped label="Outputs" labelPosition="right" />
     </div>
