@@ -88,10 +88,30 @@ const PortfolioSection = () => {
                 </div>
 
                 <div className="flex md:flex-col gap-3">
-                  <Button variant="ghost" size="sm" className="gap-2">
-                    <ExternalLink size={14} />
-                    DOI
-                  </Button>
+                  {pub.link && pub.link !== "#" ? (
+                    <Button asChild variant="ghost" size="sm" className="gap-2">
+                      <a
+                        href={pub.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Open DOI link for ${pub.title}`}
+                      >
+                        <ExternalLink size={14} />
+                        DOI
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="gap-2"
+                      disabled
+                      aria-disabled="true"
+                    >
+                      <ExternalLink size={14} />
+                      DOI (TBC)
+                    </Button>
+                  )}
                 </div>
               </div>
             </article>
