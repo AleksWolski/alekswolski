@@ -104,6 +104,16 @@ const AnimatedSinusoid = ({
   );
 };
 
+const TripleSinusoid = () => {
+  return (
+    <div className="py-4 flex justify-center gap-0">
+      <AnimatedSinusoid id="movingGradient0a" />
+      <AnimatedSinusoid id="movingGradient0b" label="Inputs" />
+      <AnimatedSinusoid id="movingGradient0c" />
+    </div>
+  );
+};
+
 const DualSinusoid = () => {
   return (
     <div className="py-4 flex justify-center gap-0">
@@ -152,7 +162,7 @@ const ResearchSection = () => {
                   </div>
                   {index < flowchartSteps.length - 1 && (
                     index === 0 ? (
-                      <AnimatedSinusoid id="movingGradient1" label="Inputs" />
+                      <TripleSinusoid />
                     ) : index === 1 ? (
                       <DualSinusoid />
                     ) : (
