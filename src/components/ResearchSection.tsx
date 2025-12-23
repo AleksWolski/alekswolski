@@ -213,10 +213,10 @@ const TripleSinusoid = () => {
   );
 };
 
-const DualSinusoid = ({ showLabels = true }: { showLabels?: boolean }) => {
+const DualSinusoid = ({ showLabels = true, cropped = false }: { showLabels?: boolean; cropped?: boolean }) => {
   return (
-    <div className="py-4 flex justify-center">
-      <svg width="200" height="80" viewBox="0 0 200 80" className="overflow-visible max-w-full">
+    <div className={cropped ? "py-2 flex justify-center" : "py-4 flex justify-center"}>
+      <svg width="200" height={cropped ? "40" : "80"} viewBox={cropped ? "0 20 200 40" : "0 0 200 80"} className="overflow-visible max-w-full">
         <defs>
           {/* Yellow input gradients */}
           <linearGradient id="movingGradient2a1" x1="0%" y1="0%" x2="0%" y2="100%" gradientUnits="userSpaceOnUse">
@@ -377,7 +377,7 @@ const MatrixDisplay = () => {
   return (
     <div className="py-4 flex flex-col items-center">
       {/* Cable bundles above matrix */}
-      <DualSinusoid showLabels={false} />
+      <DualSinusoid showLabels={false} cropped={true} />
       
       {/* 3x3 Matrix with full-height brackets */}
       <div className="flex justify-center items-stretch">
