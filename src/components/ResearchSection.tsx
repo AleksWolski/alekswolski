@@ -216,8 +216,135 @@ const TripleSinusoid = () => {
 const DualSinusoid = () => {
   return (
     <div className="py-4 flex justify-center gap-0">
-      <AnimatedSinusoid id="movingGradient2a" label="Inputs" />
-      <AnimatedSinusoid id="movingGradient2b" color="#4ade80" flipped label="Outputs" labelPosition="right" />
+      {/* Triple yellow input cables */}
+      <div className="flex flex-col items-center">
+        <svg width="180" height="80" viewBox="0 0 180 80" className="overflow-visible">
+          <defs>
+            <linearGradient id="movingGradient2a1" x1="0%" y1="0%" x2="0%" y2="100%" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="transparent">
+                <animate attributeName="offset" values="-0.35;1" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="5%" stopColor="#fcd34d">
+                <animate attributeName="offset" values="-0.30;1.05" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="30%" stopColor="#fcd34d">
+                <animate attributeName="offset" values="-0.05;1.30" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="35%" stopColor="transparent">
+                <animate attributeName="offset" values="0;1.35" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+            </linearGradient>
+            <linearGradient id="movingGradient2a2" x1="0%" y1="0%" x2="0%" y2="100%" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="transparent">
+                <animate attributeName="offset" values="-0.35;1" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="5%" stopColor="#e0b82e">
+                <animate attributeName="offset" values="-0.30;1.05" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="30%" stopColor="#e0b82e">
+                <animate attributeName="offset" values="-0.05;1.30" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="35%" stopColor="transparent">
+                <animate attributeName="offset" values="0;1.35" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+            </linearGradient>
+            <linearGradient id="movingGradient2a3" x1="0%" y1="0%" x2="0%" y2="100%" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="transparent">
+                <animate attributeName="offset" values="-0.35;1" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="5%" stopColor="#c49e1a">
+                <animate attributeName="offset" values="-0.30;1.05" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="30%" stopColor="#c49e1a">
+                <animate attributeName="offset" values="-0.05;1.30" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="35%" stopColor="transparent">
+                <animate attributeName="offset" values="0;1.35" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+            </linearGradient>
+            <clipPath id="dualClipInputs">
+              <rect x="-50" y="0" width="250" height="0">
+                <animate attributeName="y" values="-35;80" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+                <animate attributeName="height" values="35;35" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </rect>
+            </clipPath>
+          </defs>
+          
+          <text x="35" y="45" fill="#fcd34d" fontSize="14" fontWeight="500" textAnchor="end" clipPath="url(#dualClipInputs)">
+            Inputs
+          </text>
+          
+          <path d="M85 0 C85 5, 85 8, 85 10 C60 15, 60 25, 85 30 C110 35, 110 45, 85 50 C60 55, 60 65, 85 70 C85 72, 85 75, 85 80" stroke="url(#movingGradient2a1)" strokeWidth="3" fill="none" strokeLinecap="round" />
+          <path d="M90 0 C90 5, 90 8, 90 10 C65 15, 65 25, 90 30 C115 35, 115 45, 90 50 C65 55, 65 65, 90 70 C90 72, 90 75, 90 80" stroke="url(#movingGradient2a2)" strokeWidth="3" fill="none" strokeLinecap="round" />
+          <path d="M95 0 C95 5, 95 8, 95 10 C70 15, 70 25, 95 30 C120 35, 120 45, 95 50 C70 55, 70 65, 95 70 C95 72, 95 75, 95 80" stroke="url(#movingGradient2a3)" strokeWidth="3" fill="none" strokeLinecap="round" />
+        </svg>
+      </div>
+      
+      {/* Triple green output cables (flipped) */}
+      <div className="flex flex-col items-center">
+        <svg width="180" height="80" viewBox="0 0 180 80" className="overflow-visible">
+          <defs>
+            <linearGradient id="movingGradient2b1" x1="0%" y1="0%" x2="0%" y2="100%" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="transparent">
+                <animate attributeName="offset" values="-0.35;1" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="5%" stopColor="#4ade80">
+                <animate attributeName="offset" values="-0.30;1.05" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="30%" stopColor="#4ade80">
+                <animate attributeName="offset" values="-0.05;1.30" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="35%" stopColor="transparent">
+                <animate attributeName="offset" values="0;1.35" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+            </linearGradient>
+            <linearGradient id="movingGradient2b2" x1="0%" y1="0%" x2="0%" y2="100%" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="transparent">
+                <animate attributeName="offset" values="-0.35;1" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="5%" stopColor="#2eb865">
+                <animate attributeName="offset" values="-0.30;1.05" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="30%" stopColor="#2eb865">
+                <animate attributeName="offset" values="-0.05;1.30" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="35%" stopColor="transparent">
+                <animate attributeName="offset" values="0;1.35" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+            </linearGradient>
+            <linearGradient id="movingGradient2b3" x1="0%" y1="0%" x2="0%" y2="100%" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="transparent">
+                <animate attributeName="offset" values="-0.35;1" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="5%" stopColor="#1a9e4f">
+                <animate attributeName="offset" values="-0.30;1.05" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="30%" stopColor="#1a9e4f">
+                <animate attributeName="offset" values="-0.05;1.30" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="35%" stopColor="transparent">
+                <animate attributeName="offset" values="0;1.35" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+            </linearGradient>
+            <clipPath id="dualClipOutputs">
+              <rect x="-50" y="0" width="250" height="0">
+                <animate attributeName="y" values="-35;80" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+                <animate attributeName="height" values="35;35" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </rect>
+            </clipPath>
+          </defs>
+          
+          <text x="145" y="45" fill="#4ade80" fontSize="14" fontWeight="500" textAnchor="start" clipPath="url(#dualClipOutputs)">
+            Outputs
+          </text>
+          
+          <g style={{ transform: 'scaleX(-1)', transformOrigin: 'center' }}>
+            <path d="M85 0 C85 5, 85 8, 85 10 C60 15, 60 25, 85 30 C110 35, 110 45, 85 50 C60 55, 60 65, 85 70 C85 72, 85 75, 85 80" stroke="url(#movingGradient2b1)" strokeWidth="3" fill="none" strokeLinecap="round" />
+            <path d="M90 0 C90 5, 90 8, 90 10 C65 15, 65 25, 90 30 C115 35, 115 45, 90 50 C65 55, 65 65, 90 70 C90 72, 90 75, 90 80" stroke="url(#movingGradient2b2)" strokeWidth="3" fill="none" strokeLinecap="round" />
+            <path d="M95 0 C95 5, 95 8, 95 10 C70 15, 70 25, 95 30 C120 35, 120 45, 95 50 C70 55, 70 65, 95 70 C95 72, 95 75, 95 80" stroke="url(#movingGradient2b3)" strokeWidth="3" fill="none" strokeLinecap="round" />
+          </g>
+        </svg>
+      </div>
     </div>
   );
 };
