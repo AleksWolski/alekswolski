@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Calendar, GraduationCap } from "lucide-react";
 import "katex/dist/katex.min.css";
@@ -56,6 +56,91 @@ const renderAbstract = (text: string) => {
   });
 };
 
+// Publication card with expandable abstract
+const PublicationCard = ({ pub }: { pub: typeof publications[0] }) => {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <article className="group p-6 md:p-8 rounded-lg bg-background border border-border hover:border-primary/20 transition-all duration-300">
+      <div className="flex flex-col md:flex-row md:items-start gap-6">
+        <div className="flex-1">
+          <div className="flex items-center gap-3 mb-3">
+            <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
+              <Calendar size={12} />
+              {pub.year}
+            </span>
+            <span className="text-border">·</span>
+            <span className="text-xs text-primary">{pub.journal}</span>
+          </div>
+
+          <h3 className="font-display font-medium text-lg md:text-xl mb-3 group-hover:text-primary transition-colors duration-200">
+            {pub.title}
+          </h3>
+
+          <div className="text-muted-foreground text-sm leading-relaxed mb-4">
+            {expanded ? (
+              <>
+                <p>{renderAbstract(pub.abstract)}</p>
+                <button
+                  onClick={() => setExpanded(false)}
+                  className="text-primary hover:underline mt-1 text-xs font-medium"
+                >
+                  show less
+                </button>
+              </>
+            ) : (
+              <>
+                <p className="line-clamp-3">{renderAbstract(pub.abstract)}</p>
+                <button
+                  onClick={() => setExpanded(true)}
+                  className="text-primary hover:underline mt-1 text-xs font-medium"
+                >
+                  read more...
+                </button>
+              </>
+            )}
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            {pub.tags.map((tag) => (
+              <span key={tag} className="px-2.5 py-1 text-xs rounded-md bg-secondary text-secondary-foreground">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex md:flex-col gap-3">
+          {pub.link && pub.link !== "#" ? (
+            <Button asChild variant="ghost" size="sm" className="gap-2">
+              <a
+                href={pub.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open DOI link for ${pub.title}`}
+              >
+                <ExternalLink size={14} />
+                DOI
+              </a>
+            </Button>
+          ) : (
+            <Button
+              variant="ghost"
+              size="sm"
+              className="gap-2"
+              disabled
+              aria-disabled="true"
+            >
+              <ExternalLink size={14} />
+              DOI (TBC)
+            </Button>
+          )}
+        </div>
+      </div>
+    </article>
+  );
+};
+
 const PortfolioSection = () => {
   return (
     <section id="portfolio" className="py-28 bg-card/30">
@@ -71,64 +156,7 @@ const PortfolioSection = () => {
         {/* Publications list */}
         <div className="grid gap-5 max-w-4xl mx-auto">
           {publications.map((pub) => (
-            <article
-              key={pub.title}
-              className="group p-6 md:p-8 rounded-lg bg-background border border-border hover:border-primary/20 transition-all duration-300"
-            >
-              <div className="flex flex-col md:flex-row md:items-start gap-6">
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                      <Calendar size={12} />
-                      {pub.year}
-                    </span>
-                    <span className="text-border">·</span>
-                    <span className="text-xs text-primary">{pub.journal}</span>
-                  </div>
-
-                  <h3 className="font-display font-medium text-lg md:text-xl mb-3 group-hover:text-primary transition-colors duration-200">
-                    {pub.title}
-                  </h3>
-
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">{renderAbstract(pub.abstract)}</p>
-
-                  <div className="flex flex-wrap gap-2">
-                    {pub.tags.map((tag) => (
-                      <span key={tag} className="px-2.5 py-1 text-xs rounded-md bg-secondary text-secondary-foreground">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="flex md:flex-col gap-3">
-                  {pub.link && pub.link !== "#" ? (
-                    <Button asChild variant="ghost" size="sm" className="gap-2">
-                      <a
-                        href={pub.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`Open DOI link for ${pub.title}`}
-                      >
-                        <ExternalLink size={14} />
-                        DOI
-                      </a>
-                    </Button>
-                  ) : (
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="gap-2"
-                      disabled
-                      aria-disabled="true"
-                    >
-                      <ExternalLink size={14} />
-                      DOI (TBC)
-                    </Button>
-                  )}
-                </div>
-              </div>
-            </article>
+            <PublicationCard key={pub.title} pub={pub} />
           ))}
         </div>
 
