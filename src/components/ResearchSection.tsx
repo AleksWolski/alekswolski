@@ -19,22 +19,12 @@ const AnimatedSinusoid = () => {
             <stop offset="100%" stopColor="#ea580c" />
           </linearGradient>
         </defs>
-        {/* Static background path */}
+        {/* Animated wave */}
         <path
-          d="M60 0 C60 5, 60 10, 60 15 C30 20, 30 35, 60 40 C90 45, 90 60, 60 65 C60 70, 60 75, 60 80"
-          stroke="hsl(var(--primary) / 0.2)"
-          strokeWidth="3"
-          fill="none"
-          strokeLinecap="round"
-        />
-        {/* Animated wave overlay */}
-        <path
-          d="M60 0 C60 5, 60 10, 60 15 C30 20, 30 35, 60 40 C90 45, 90 60, 60 65 C60 70, 60 75, 60 80"
           stroke="url(#sinusoidGradient)"
           strokeWidth="3"
           fill="none"
           strokeLinecap="round"
-          strokeDasharray="20 10"
           className="animate-sinusoid-phase"
         />
         {/* Arrow head */}
@@ -50,14 +40,23 @@ const ResearchSection = () => {
       <style>{`
         @keyframes sinusoidPhase {
           0% {
-            stroke-dashoffset: 0;
+            d: path("M60 0 C60 5, 60 8, 60 10 C35 15, 35 25, 60 30 C85 35, 85 45, 60 50 C35 55, 35 65, 60 70 C60 72, 60 75, 60 80");
+          }
+          25% {
+            d: path("M60 0 C60 5, 60 8, 60 10 C85 15, 85 25, 60 30 C35 35, 35 45, 60 50 C85 55, 85 65, 60 70 C60 72, 60 75, 60 80");
+          }
+          50% {
+            d: path("M60 0 C60 5, 60 8, 60 10 C35 15, 35 25, 60 30 C85 35, 85 45, 60 50 C35 55, 35 65, 60 70 C60 72, 60 75, 60 80");
+          }
+          75% {
+            d: path("M60 0 C60 5, 60 8, 60 10 C85 15, 85 25, 60 30 C35 35, 35 45, 60 50 C85 55, 85 65, 60 70 C60 72, 60 75, 60 80");
           }
           100% {
-            stroke-dashoffset: -60;
+            d: path("M60 0 C60 5, 60 8, 60 10 C35 15, 35 25, 60 30 C85 35, 85 45, 60 50 C35 55, 35 65, 60 70 C60 72, 60 75, 60 80");
           }
         }
         .animate-sinusoid-phase {
-          animation: sinusoidPhase 3s linear infinite;
+          animation: sinusoidPhase 4s ease-in-out infinite;
         }
       `}</style>
       <div className="container mx-auto px-6">
