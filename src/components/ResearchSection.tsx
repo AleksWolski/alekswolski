@@ -472,21 +472,29 @@ const MatrixWithCables = () => {
           })}
         </svg>
         
-        {/* Blue cable bundle - 5 cables with sin(t) + sin(2t) wave pattern */}
+        {/* Blue cable bundle - 5 cables with sin(t) + sin(2t) wave pattern, flipped */}
         <svg 
           width="100" 
           height="45" 
           viewBox="0 0 100 45" 
         >
           <defs>
-            <linearGradient 
-              id="blueCableGradient" 
-              x1="0%" 
-              y1="0%" 
-              x2="100%" 
-              y2="0%" 
-              gradientUnits="userSpaceOnUse"
-            >
+            {/* Blue gradients with increasing darkness */}
+            <linearGradient id="blueCableGradient0" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="transparent">
+                <animate attributeName="offset" values="-0.35;0.65" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="5%" stopColor="#60a5fa">
+                <animate attributeName="offset" values="-0.30;0.70" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="30%" stopColor="#60a5fa">
+                <animate attributeName="offset" values="-0.05;0.95" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="35%" stopColor="transparent">
+                <animate attributeName="offset" values="0;1" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+            </linearGradient>
+            <linearGradient id="blueCableGradient1" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
               <stop offset="0%" stopColor="transparent">
                 <animate attributeName="offset" values="-0.35;0.65" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
               </stop>
@@ -500,22 +508,66 @@ const MatrixWithCables = () => {
                 <animate attributeName="offset" values="0;1" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
               </stop>
             </linearGradient>
+            <linearGradient id="blueCableGradient2" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="transparent">
+                <animate attributeName="offset" values="-0.35;0.65" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="5%" stopColor="#2563eb">
+                <animate attributeName="offset" values="-0.30;0.70" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="30%" stopColor="#2563eb">
+                <animate attributeName="offset" values="-0.05;0.95" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="35%" stopColor="transparent">
+                <animate attributeName="offset" values="0;1" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+            </linearGradient>
+            <linearGradient id="blueCableGradient3" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="transparent">
+                <animate attributeName="offset" values="-0.35;0.65" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="5%" stopColor="#1d4ed8">
+                <animate attributeName="offset" values="-0.30;0.70" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="30%" stopColor="#1d4ed8">
+                <animate attributeName="offset" values="-0.05;0.95" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="35%" stopColor="transparent">
+                <animate attributeName="offset" values="0;1" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+            </linearGradient>
+            <linearGradient id="blueCableGradient4" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="transparent">
+                <animate attributeName="offset" values="-0.35;0.65" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="5%" stopColor="#1e40af">
+                <animate attributeName="offset" values="-0.30;0.70" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="30%" stopColor="#1e40af">
+                <animate attributeName="offset" values="-0.05;0.95" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="35%" stopColor="transparent">
+                <animate attributeName="offset" values="0;1" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+            </linearGradient>
           </defs>
           
           {[0, 1, 2, 3, 4].map((i) => {
-            const baseY = 8 + i * 7;
+            const baseY = 22;
+            const offset = (i - 2) * 5;
             const amplitude = 5;
             const points: string[] = [];
             for (let x = 0; x <= 90; x += 2) {
               const t = (x / 90) * Math.PI * 2;
-              const y = baseY + amplitude * (Math.sin(t) + Math.sin(2 * t)) / 2;
+              // Flipped over x-axis (negative amplitude)
+              const y = baseY + offset - amplitude * (Math.sin(t) + Math.sin(2 * t)) / 2;
               points.push(`${x},${y}`);
             }
             return (
               <polyline
                 key={i}
                 points={points.join(' ')}
-                stroke="url(#blueCableGradient)"
+                stroke={`url(#blueCableGradient${i})`}
                 strokeWidth="3"
                 fill="none"
                 strokeLinecap="round"
