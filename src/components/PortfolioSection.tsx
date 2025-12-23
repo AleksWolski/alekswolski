@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Calendar, GraduationCap } from "lucide-react";
 import "katex/dist/katex.min.css";
@@ -59,6 +59,15 @@ const renderAbstract = (text: string) => {
 // Publication card with expandable abstract
 const PublicationCard = ({ pub }: { pub: typeof publications[0] }) => {
   const [expanded, setExpanded] = useState(false);
+  const [isClamped, setIsClamped] = useState(false);
+  const textRef = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    const el = textRef.current;
+    if (el) {
+      setIsClamped(el.scrollHeight > el.clientHeight);
+    }
+  }, [pub.abstract]);
 
   return (
     <article className="group p-6 md:p-8 rounded-lg bg-background border border-border hover:border-primary/20 transition-all duration-300">
@@ -90,13 +99,15 @@ const PublicationCard = ({ pub }: { pub: typeof publications[0] }) => {
               </>
             ) : (
               <>
-                <p className="line-clamp-3">{renderAbstract(pub.abstract)}</p>
-                <button
-                  onClick={() => setExpanded(true)}
-                  className="text-primary hover:underline mt-1 text-xs font-medium"
-                >
-                  read more...
-                </button>
+                <p ref={textRef} className="line-clamp-3">{renderAbstract(pub.abstract)}</p>
+                {isClamped && (
+                  <button
+                    onClick={() => setExpanded(true)}
+                    className="text-primary hover:underline mt-1 text-xs font-medium"
+                  >
+                    read more...
+                  </button>
+                )}
               </>
             )}
           </div>
