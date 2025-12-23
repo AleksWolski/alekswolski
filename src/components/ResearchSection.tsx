@@ -215,7 +215,7 @@ const TripleSinusoid = () => {
 
 const DualSinusoid = () => {
   return (
-    <div className="py-4 flex justify-center gap-0">
+    <div className="py-4 flex justify-center -mx-12">
       {/* Triple yellow input cables */}
       <div className="flex flex-col items-center">
         <svg width="180" height="80" viewBox="0 0 180 80" className="overflow-visible">
