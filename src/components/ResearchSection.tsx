@@ -395,6 +395,11 @@ const MatrixDisplay = () => {
           <path d="M2 2 L7 2 L7 52 L2 52" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </div>
+      
+      {/* Cable bundles below matrix - cropped to half height */}
+      <div className="h-[50px] overflow-hidden -mb-4">
+        <DualSinusoid showLabels={false} />
+      </div>
     </div>
   );
 };
