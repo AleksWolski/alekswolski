@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Mail, MapPin, Building } from 'lucide-react';
+import { Mail, GraduationCap, Linkedin } from 'lucide-react';
 
 const ContactSection = () => {
   return (
@@ -24,24 +24,24 @@ const ContactSection = () => {
                 <Mail className="text-primary" size={18} />
               </div>
               <h3 className="font-display text-sm mb-1">Email</h3>
-              <p className="text-muted-foreground text-xs">researcher@university.edu</p>
+              <p className="text-muted-foreground text-xs">ajw2g20@soton.ac.uk</p>
             </div>
 
-            <div className="p-6 rounded-lg bg-card border border-border text-center">
+            <a href="https://scholar.google.com/citations?user=0Jq6nvIAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="p-6 rounded-lg bg-card border border-border text-center hover:border-primary/50 transition-colors">
               <div className="w-10 h-10 mx-auto rounded-md bg-primary/10 flex items-center justify-center mb-4">
-                <Building className="text-primary" size={18} />
+                <GraduationCap className="text-primary" size={18} />
               </div>
-              <h3 className="font-display text-sm mb-1">Department</h3>
-              <p className="text-muted-foreground text-xs">Applied Mathematics</p>
-            </div>
+              <h3 className="font-display text-sm mb-1">Google Scholar</h3>
+              <p className="text-muted-foreground text-xs">View Publications</p>
+            </a>
 
-            <div className="p-6 rounded-lg bg-card border border-border text-center">
+            <a href="https://www.linkedin.com/in/aleks-wolski/" target="_blank" rel="noopener noreferrer" className="p-6 rounded-lg bg-card border border-border text-center hover:border-primary/50 transition-colors">
               <div className="w-10 h-10 mx-auto rounded-md bg-primary/10 flex items-center justify-center mb-4">
-                <MapPin className="text-primary" size={18} />
+                <Linkedin className="text-primary" size={18} />
               </div>
-              <h3 className="font-display text-sm mb-1">Location</h3>
-              <p className="text-muted-foreground text-xs">University Campus</p>
-            </div>
+              <h3 className="font-display text-sm mb-1">LinkedIn</h3>
+              <p className="text-muted-foreground text-xs">Connect with Me</p>
+            </a>
           </div>
 
           <Button variant="hero" size="lg" className="gap-2">
