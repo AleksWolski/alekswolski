@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Mail, Github, Linkedin } from "lucide-react";
+import { ArrowDown, Mail, Linkedin, GraduationCap } from "lucide-react";
 import ControlTheoryBackground from "./ControlTheoryBackground";
 import portrait from "@/assets/portrait.jpg";
 
@@ -38,13 +38,13 @@ const HeroSection = () => {
             </div>
 
             {/* Social Links */}
-            <div className="opacity-0 animate-fade-in-up animation-delay-800 flex gap-4 mt-10 justify-center lg:justify-start">
+            <div className="opacity-0 animate-fade-in-up animation-delay-800 flex gap-4 mt-10 mb-20 justify-center lg:justify-start">
               <a
                 href="#"
                 className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                aria-label="GitHub"
+                aria-label="Google Scholar"
               >
-                <Github size={20} />
+                <GraduationCap size={20} />
               </a>
               <a
                 href="#"
