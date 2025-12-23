@@ -10,13 +10,6 @@ const ContactSection = () => {
           <p className="text-primary font-body font-medium mb-4 tracking-widest uppercase text-xs">
             Get in Touch
           </p>
-          <h2 className="font-display text-3xl md:text-4xl mb-6">
-            Let's <span className="text-gradient italic">Collaborate</span>
-          </h2>
-          <p className="text-muted-foreground mb-14">
-            Interested in my research or potential collaborations? 
-            I'm always open to discussing new ideas and opportunities.
-          </p>
 
           <div className="grid sm:grid-cols-3 gap-5 mb-14">
             <div className="p-6 rounded-lg bg-card border border-border text-center">
