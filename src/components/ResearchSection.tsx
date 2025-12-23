@@ -47,28 +47,43 @@ const AnimatedSinusoid = ({
           </linearGradient>
         </defs>
         
-        {/* Label text with animation */}
+        {/* Label text with clip animation */}
         {label && (
-          <text 
-            x={labelPosition === "left" ? "25" : "155"} 
-            y="45" 
-            fill={color}
-            fontSize="14"
-            fontWeight="500"
-            textAnchor={labelPosition === "left" ? "end" : "start"}
-            opacity="0"
-          >
-            {label}
-            <animate 
-              attributeName="opacity" 
-              values="0;0;1;1;0;0" 
-              keyTimes="0;0.1;0.2;0.4;0.5;1"
-              dur="3s" 
-              repeatCount="indefinite" 
-              calcMode="linear"
-              begin="0s"
-            />
-          </text>
+          <g>
+            <defs>
+              <clipPath id={`${id}-clip`}>
+                <rect x="0" y="0" width="180" height="0">
+                  <animate 
+                    attributeName="y" 
+                    values="-30;80" 
+                    dur="3s" 
+                    repeatCount="indefinite" 
+                    calcMode="linear"
+                    begin="0s"
+                  />
+                  <animate 
+                    attributeName="height" 
+                    values="30;30" 
+                    dur="3s" 
+                    repeatCount="indefinite" 
+                    calcMode="linear"
+                    begin="0s"
+                  />
+                </rect>
+              </clipPath>
+            </defs>
+            <text 
+              x={labelPosition === "left" ? "25" : "155"} 
+              y="45" 
+              fill={color}
+              fontSize="14"
+              fontWeight="500"
+              textAnchor={labelPosition === "left" ? "end" : "start"}
+              clipPath={`url(#${id}-clip)`}
+            >
+              {label}
+            </text>
+          </g>
         )}
         
         {/* Static sinusoidal path */}
