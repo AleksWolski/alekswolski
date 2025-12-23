@@ -426,14 +426,22 @@ const MatrixWithCables = () => {
           viewBox="0 0 100 35" 
         >
           <defs>
-            <linearGradient 
-              id="redCableGradient" 
-              x1="0%" 
-              y1="0%" 
-              x2="100%" 
-              y2="0%" 
-              gradientUnits="userSpaceOnUse"
-            >
+            {/* Red gradients with increasing darkness */}
+            <linearGradient id="redCableGradient0" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="transparent">
+                <animate attributeName="offset" values="-0.35;0.65" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="5%" stopColor="#f87171">
+                <animate attributeName="offset" values="-0.30;0.70" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="30%" stopColor="#f87171">
+                <animate attributeName="offset" values="-0.05;0.95" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="35%" stopColor="transparent">
+                <animate attributeName="offset" values="0;1" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+            </linearGradient>
+            <linearGradient id="redCableGradient1" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
               <stop offset="0%" stopColor="transparent">
                 <animate attributeName="offset" values="-0.35;0.65" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
               </stop>
@@ -441,6 +449,20 @@ const MatrixWithCables = () => {
                 <animate attributeName="offset" values="-0.30;0.70" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
               </stop>
               <stop offset="30%" stopColor="#ef4444">
+                <animate attributeName="offset" values="-0.05;0.95" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="35%" stopColor="transparent">
+                <animate attributeName="offset" values="0;1" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+            </linearGradient>
+            <linearGradient id="redCableGradient2" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="transparent">
+                <animate attributeName="offset" values="-0.35;0.65" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="5%" stopColor="#dc2626">
+                <animate attributeName="offset" values="-0.30;0.70" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+              </stop>
+              <stop offset="30%" stopColor="#dc2626">
                 <animate attributeName="offset" values="-0.05;0.95" dur="2s" repeatCount="indefinite" calcMode="linear" begin="0s" />
               </stop>
               <stop offset="35%" stopColor="transparent">
@@ -462,7 +484,7 @@ const MatrixWithCables = () => {
               <polyline
                 key={i}
                 points={points.join(' ')}
-                stroke="url(#redCableGradient)"
+                stroke={`url(#redCableGradient${i})`}
                 strokeWidth="3"
                 fill="none"
                 strokeLinecap="round"
