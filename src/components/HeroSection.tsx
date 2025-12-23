@@ -40,14 +40,18 @@ const HeroSection = () => {
             {/* Social Links */}
             <div className="opacity-0 animate-fade-in-up animation-delay-800 flex gap-4 mt-10 mb-20 justify-center lg:justify-start">
               <a
-                href="#"
+                href="https://scholar.google.com/citations?user=0Jq6nvIAAAAJ&hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors duration-200"
                 aria-label="Google Scholar"
               >
                 <GraduationCap size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/aleks-wolski/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors duration-200"
                 aria-label="LinkedIn"
               >
