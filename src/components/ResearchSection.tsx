@@ -40,8 +40,6 @@ const AnimatedSinusoid = () => {
           fill="none"
           strokeLinecap="round"
         />
-        {/* Arrow head */}
-        <polygon points="60,90 54,80 66,80" fill="#f97316" />
       </svg>
     </div>
   );
