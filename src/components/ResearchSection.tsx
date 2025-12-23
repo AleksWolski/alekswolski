@@ -34,8 +34,7 @@ const ResearchSection = () => {
             Research Focus
           </p>
           <h2 className="font-display font-semibold text-3xl md:text-4xl mb-6">
-            Exploring the Intersection of <br className="hidden md:block" />
-            <span className="text-gradient">Data & Dynamics</span>
+            Data-Driven Methods for <span className="text-gradient">Continuous-Time Systems</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             My research bridges the gap between classical control theory and modern 
