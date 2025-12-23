@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Mail, Github, Linkedin } from 'lucide-react';
 import ControlTheoryBackground from './ControlTheoryBackground';
+import portrait from '@/assets/portrait.jpg';
 
 const HeroSection = () => {
   return (
@@ -63,15 +64,11 @@ const HeroSection = () => {
             <div className="opacity-0 animate-fade-in-up animation-delay-400 relative">
               {/* Portrait container */}
               <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border border-border shadow-lg">
-                {/* Placeholder for portrait */}
-                <div className="w-full h-full bg-gradient-to-br from-secondary via-card to-background flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-primary/10 flex items-center justify-center">
-                      <span className="text-primary text-2xl font-display font-semibold">?</span>
-                    </div>
-                    <p className="text-muted-foreground text-sm">Your Portrait</p>
-                  </div>
-                </div>
+                <img 
+                  src={portrait} 
+                  alt="Portrait" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               {/* Decorative elements */}
