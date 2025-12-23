@@ -456,11 +456,11 @@ const MatrixWithCables = () => {
         {[0, 1, 2].map((i) => {
           const startY = 47 + (i - 1) * 8; // Tighter bundle spacing
           const endY = 110;
-          const endX = 225 + (i - 1) * 5; // Slight spread at end
+          const endX = 210 + i * 10; // First cable ends left, last cable ends right
           return (
             <path
               key={i}
-              d={`M187 ${startY} C 210 ${startY}, 225 ${startY + 25}, ${endX} ${endY}`}
+              d={`M187 ${startY} C 205 ${startY}, ${endX - 15} ${70}, ${endX} ${endY}`}
               stroke="url(#cableBundleGradient)"
               strokeWidth="3"
               fill="none"
