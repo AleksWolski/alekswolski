@@ -1,39 +1,42 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { ExternalLink, FileText, Calendar, GraduationCap } from 'lucide-react';
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { ExternalLink, FileText, Calendar, GraduationCap } from "lucide-react";
 
 const publications = [
   {
-    title: 'Data-Driven Control of Continuous-Time LTI Systems',
-    journal: 'IEEE Transactions on Automatic Control',
-    year: '2024',
-    abstract: 'A novel framework for synthesizing stabilizing controllers directly from input-output trajectories without prior system identification.',
-    tags: ['Control Theory', 'Data-Driven', 'LTI Systems'],
-    link: '#',
+    title: "Data-Driven Control of Continuous-Time LTI Systems",
+    journal: "IEEE Transactions on Automatic Control",
+    year: "2024",
+    abstract:
+      "A novel framework for synthesizing stabilizing controllers directly from input-output trajectories without prior system identification.",
+    tags: ["Control Theory", "Data-Driven", "LTI Systems"],
+    link: "#",
   },
   {
-    title: 'Robust Identification from Noisy Data',
-    journal: 'Automatica',
-    year: '2023',
-    abstract: 'Developing noise-resilient algorithms for continuous-time system identification with guaranteed error bounds.',
-    tags: ['System Identification', 'Robust Methods', 'Continuous-Time'],
-    link: '#',
+    title: "Robust Identification from Noisy Data",
+    journal: "Automatica",
+    year: "2023",
+    abstract:
+      "Developing noise-resilient algorithms for continuous-time system identification with guaranteed error bounds.",
+    tags: ["System Identification", "Robust Methods", "Continuous-Time"],
+    link: "#",
   },
   {
-    title: 'Simulation Without Models: A Data-Centric Approach',
-    journal: 'IFAC World Congress',
-    year: '2023',
-    abstract: 'Enabling accurate system simulation using only measured data, bypassing traditional model-building steps.',
-    tags: ['Simulation', 'Data-Driven', 'Model-Free'],
-    link: '#',
+    title: "Simulation Without Models: A Data-Centric Approach",
+    journal: "IFAC World Congress",
+    year: "2023",
+    abstract:
+      "Enabling accurate system simulation using only measured data, bypassing traditional model-building steps.",
+    tags: ["Simulation", "Data-Driven", "Model-Free"],
+    link: "#",
   },
   {
-    title: 'Behavioral Framework for LTI System Analysis',
-    journal: 'Systems & Control Letters',
-    year: '2022',
-    abstract: 'Extending behavioral systems theory to accommodate data-driven representations of dynamical systems.',
-    tags: ['Behavioral Theory', 'LTI Systems', 'Analysis'],
-    link: '#',
+    title: "Behavioral Framework for LTI System Analysis",
+    journal: "Systems & Control Letters",
+    year: "2022",
+    abstract: "Extending behavioral systems theory to accommodate data-driven representations of dynamical systems.",
+    tags: ["Behavioral Theory", "LTI Systems", "Analysis"],
+    link: "#",
   },
 ];
 
@@ -43,16 +46,10 @@ const PortfolioSection = () => {
       <div className="container mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
-          <p className="text-primary font-display font-medium mb-4 tracking-widest uppercase text-xs">
-            Publications
-          </p>
+          <p className="text-primary font-display font-medium mb-4 tracking-widest uppercase text-xs">Publications</p>
           <h2 className="font-display font-semibold text-3xl md:text-4xl mb-6">
-            Selected <span className="text-gradient">Research Work</span>
+            <span className="text-gradient">Published</span> and upcoming work
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            A selection of my published papers in top-tier journals and conferences 
-            in control theory and applied mathematics.
-          </p>
         </div>
 
         {/* Publications list */}
@@ -72,21 +69,16 @@ const PortfolioSection = () => {
                     <span className="text-border">·</span>
                     <span className="text-xs text-primary">{pub.journal}</span>
                   </div>
-                  
+
                   <h3 className="font-display font-medium text-lg md:text-xl mb-3 group-hover:text-primary transition-colors duration-200">
                     {pub.title}
                   </h3>
-                  
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                    {pub.abstract}
-                  </p>
-                  
+
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">{pub.abstract}</p>
+
                   <div className="flex flex-wrap gap-2">
                     {pub.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2.5 py-1 text-xs rounded-md bg-secondary text-secondary-foreground"
-                      >
+                      <span key={tag} className="px-2.5 py-1 text-xs rounded-md bg-secondary text-secondary-foreground">
                         {tag}
                       </span>
                     ))}
@@ -109,9 +101,9 @@ const PortfolioSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <a 
-            href="https://scholar.google.com/citations?user=0Jq6nvIAAAAJ&hl=en" 
-            target="_blank" 
+          <a
+            href="https://scholar.google.com/citations?user=0Jq6nvIAAAAJ&hl=en"
+            target="_blank"
             rel="noopener noreferrer"
           >
             <Button variant="hero" size="lg" className="gap-2">
