@@ -399,6 +399,85 @@ const MatrixDisplay = () => {
   );
 };
 
+const MatrixWithCables = () => {
+  const cableColors = ['#fcd34d', '#f97316', '#22c55e'];
+  
+  return (
+    <div className="py-6 flex justify-center items-center relative">
+      <svg 
+        width="300" 
+        height="120" 
+        viewBox="0 0 300 120" 
+        className="overflow-visible"
+      >
+        <defs>
+          {cableColors.map((color, i) => (
+            <linearGradient 
+              key={i}
+              id={`cableGradient${i}`} 
+              x1="0%" 
+              y1="0%" 
+              x2="100%" 
+              y2="0%" 
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0%" stopColor="transparent">
+                <animate attributeName="offset" values="-0.35;1" dur="2.5s" repeatCount="indefinite" calcMode="linear" begin={`${i * 0.3}s`} />
+              </stop>
+              <stop offset="5%" stopColor={color}>
+                <animate attributeName="offset" values="-0.30;1.05" dur="2.5s" repeatCount="indefinite" calcMode="linear" begin={`${i * 0.3}s`} />
+              </stop>
+              <stop offset="30%" stopColor={color}>
+                <animate attributeName="offset" values="-0.05;1.30" dur="2.5s" repeatCount="indefinite" calcMode="linear" begin={`${i * 0.3}s`} />
+              </stop>
+              <stop offset="35%" stopColor="transparent">
+                <animate attributeName="offset" values="0;1.35" dur="2.5s" repeatCount="indefinite" calcMode="linear" begin={`${i * 0.3}s`} />
+              </stop>
+            </linearGradient>
+          ))}
+        </defs>
+        
+        {/* Matrix - centered */}
+        <g transform="translate(110, 33)">
+          {/* Left bracket */}
+          <path d="M8 2 L3 2 L3 52 L8 52" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+          
+          {/* Dots grid */}
+          {Array.from({ length: 9 }).map((_, i) => {
+            const row = Math.floor(i / 3);
+            const col = i % 3;
+            const x = 18 + col * 18;
+            const y = 14 + row * 14;
+            return (
+              <text key={i} x={x} y={y} fill="hsl(var(--primary))" fontSize="14" textAnchor="middle" dominantBaseline="middle">•</text>
+            );
+          })}
+          
+          {/* Right bracket */}
+          <path d="M72 2 L77 2 L77 52 L72 52" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        </g>
+        
+        {/* Animated cables coming out from right side of matrix, curving down */}
+        {cableColors.map((_, i) => {
+          const startY = 47 + (i - 1) * 14; // Spread from matrix rows
+          const endX = 230;
+          const endY = 110;
+          return (
+            <path
+              key={i}
+              d={`M187 ${startY} C 210 ${startY}, 230 ${startY + 20}, ${endX} ${endY}`}
+              stroke={`url(#cableGradient${i})`}
+              strokeWidth="3"
+              fill="none"
+              strokeLinecap="round"
+            />
+          );
+        })}
+      </svg>
+    </div>
+  );
+};
+
 const ResearchSection = () => {
   return (
     <section id="research" className="py-28 relative">
@@ -444,19 +523,7 @@ const ResearchSection = () => {
                     ) : index === 2 ? (
                       <MatrixDisplay />
                     ) : (
-                      <div className="py-6 flex justify-center items-center">
-                        <svg width="10" height="54" viewBox="0 0 10 54" className="text-primary flex-shrink-0">
-                          <path d="M8 2 L3 2 L3 52 L8 52" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                        <div className="grid grid-cols-3 gap-x-3 gap-y-1 px-1">
-                          {Array.from({ length: 9 }).map((_, i) => (
-                            <span key={i} className="text-primary text-center text-base leading-4 w-4 h-4 flex items-center justify-center">•</span>
-                          ))}
-                        </div>
-                        <svg width="10" height="54" viewBox="0 0 10 54" className="text-primary flex-shrink-0">
-                          <path d="M2 2 L7 2 L7 52 L2 52" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </div>
+                      <MatrixWithCables />
                     )
                   )}
                 </React.Fragment>
