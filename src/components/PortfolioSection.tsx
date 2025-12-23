@@ -19,7 +19,7 @@ const publications = [
     year: "TBC",
     abstract:
       "We are given:  sufficiently informative input-output data  from a quarter-plane causal $2D$ system; boundary conditions; and an input-sequence over a finite extent set of $\Z \times \Z$. We  compute from such data a local solution to the (unknown) system of partial difference equations governing the system (\emph{data-driven simulation}). Given a quadratic cost and a reference  trajectory, we compute from the data an input-output trajectory locally satisfying the system equations, that minimizes the quadratic cost (\emph{optimal output-tracking problem}). ",
-    tags: ["System Identification", "Robust Methods", "Continuous-Time"],
+    tags: ["2D Systems", "Data-Driven Simulation", "Data-Driven Control"],
     link: "#",
   },
   {
