@@ -352,17 +352,17 @@ const DualSinusoid = () => {
         </text>
         
         {/* Yellow input cables (left side) */}
-        <path d="M75 0 C75 5, 75 8, 75 10 C50 15, 50 25, 75 30 C100 35, 100 45, 75 50 C50 55, 50 65, 75 70 C75 72, 75 75, 75 80" stroke="url(#movingGradient2a1)" strokeWidth="3" fill="none" strokeLinecap="round" />
-        <path d="M80 0 C80 5, 80 8, 80 10 C55 15, 55 25, 80 30 C105 35, 105 45, 80 50 C55 55, 55 65, 80 70 C80 72, 80 75, 80 80" stroke="url(#movingGradient2a2)" strokeWidth="3" fill="none" strokeLinecap="round" />
-        <path d="M85 0 C85 5, 85 8, 85 10 C60 15, 60 25, 85 30 C110 35, 110 45, 85 50 C60 55, 60 65, 85 70 C85 72, 85 75, 85 80" stroke="url(#movingGradient2a3)" strokeWidth="3" fill="none" strokeLinecap="round" />
+        <path d="M60 0 C60 5, 60 8, 60 10 C35 15, 35 25, 60 30 C85 35, 85 45, 60 50 C35 55, 35 65, 60 70 C60 72, 60 75, 60 80" stroke="url(#movingGradient2a1)" strokeWidth="3" fill="none" strokeLinecap="round" />
+        <path d="M65 0 C65 5, 65 8, 65 10 C40 15, 40 25, 65 30 C90 35, 90 45, 65 50 C40 55, 40 65, 65 70 C65 72, 65 75, 65 80" stroke="url(#movingGradient2a2)" strokeWidth="3" fill="none" strokeLinecap="round" />
+        <path d="M70 0 C70 5, 70 8, 70 10 C45 15, 45 25, 70 30 C95 35, 95 45, 70 50 C45 55, 45 65, 70 70 C70 72, 70 75, 70 80" stroke="url(#movingGradient2a3)" strokeWidth="3" fill="none" strokeLinecap="round" />
         
         {/* Green output cables (right side, flipped) */}
         <g style={{ transform: 'scaleX(-1)', transformOrigin: '100px 40px' }}>
-          <path d="M83 0 C83 5, 83 8, 83 10 C58 15, 58 25, 83 30 C108 35, 108 45, 83 50 C58 55, 58 65, 83 70 C83 72, 83 75, 83 80" stroke="url(#movingGradient2b1)" strokeWidth="3" fill="none" strokeLinecap="round" />
-          <path d="M87 0 C87 5, 87 8, 87 10 C62 15, 62 25, 87 30 C112 35, 112 45, 87 50 C62 55, 62 65, 87 70 C87 72, 87 75, 87 80" stroke="url(#movingGradient2b2)" strokeWidth="3" fill="none" strokeLinecap="round" />
-          <path d="M91 0 C91 5, 91 8, 91 10 C66 15, 66 25, 91 30 C116 35, 116 45, 91 50 C66 55, 66 65, 91 70 C91 72, 91 75, 91 80" stroke="url(#movingGradient2b3)" strokeWidth="3" fill="none" strokeLinecap="round" />
-          <path d="M95 0 C95 5, 95 8, 95 10 C70 15, 70 25, 95 30 C120 35, 120 45, 95 50 C70 55, 70 65, 95 70 C95 72, 95 75, 95 80" stroke="url(#movingGradient2b4)" strokeWidth="3" fill="none" strokeLinecap="round" />
-          <path d="M99 0 C99 5, 99 8, 99 10 C74 15, 74 25, 99 30 C124 35, 124 45, 99 50 C74 55, 74 65, 99 70 C99 72, 99 75, 99 80" stroke="url(#movingGradient2b5)" strokeWidth="3" fill="none" strokeLinecap="round" />
+          <path d="M68 0 C68 5, 68 8, 68 10 C43 15, 43 25, 68 30 C93 35, 93 45, 68 50 C43 55, 43 65, 68 70 C68 72, 68 75, 68 80" stroke="url(#movingGradient2b1)" strokeWidth="3" fill="none" strokeLinecap="round" />
+          <path d="M72 0 C72 5, 72 8, 72 10 C47 15, 47 25, 72 30 C97 35, 97 45, 72 50 C47 55, 47 65, 72 70 C72 72, 72 75, 72 80" stroke="url(#movingGradient2b2)" strokeWidth="3" fill="none" strokeLinecap="round" />
+          <path d="M76 0 C76 5, 76 8, 76 10 C51 15, 51 25, 76 30 C101 35, 101 45, 76 50 C51 55, 51 65, 76 70 C76 72, 76 75, 76 80" stroke="url(#movingGradient2b3)" strokeWidth="3" fill="none" strokeLinecap="round" />
+          <path d="M80 0 C80 5, 80 8, 80 10 C55 15, 55 25, 80 30 C105 35, 105 45, 80 50 C55 55, 55 65, 80 70 C80 72, 80 75, 80 80" stroke="url(#movingGradient2b4)" strokeWidth="3" fill="none" strokeLinecap="round" />
+          <path d="M84 0 C84 5, 84 8, 84 10 C59 15, 59 25, 84 30 C109 35, 109 45, 84 50 C59 55, 59 65, 84 70 C84 72, 84 75, 84 80" stroke="url(#movingGradient2b5)" strokeWidth="3" fill="none" strokeLinecap="round" />
         </g>
       </svg>
     </div>
