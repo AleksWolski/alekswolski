@@ -44,10 +44,6 @@ const ContactSection = () => {
             </a>
           </div>
 
-          <Button variant="hero" size="lg" className="gap-2">
-            <Mail size={18} />
-            Send a Message
-          </Button>
         </div>
       </div>
     </section>
