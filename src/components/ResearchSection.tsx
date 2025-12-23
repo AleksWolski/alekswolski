@@ -16,19 +16,16 @@ const AnimatedSinusoid = () => {
         <defs>
           <linearGradient id="movingGradient" x1="0%" y1="0%" x2="0%" y2="100%" gradientUnits="userSpaceOnUse">
             <stop offset="0%" stopColor="transparent">
-              <animate attributeName="offset" values="-1;1" dur="2s" repeatCount="indefinite" />
+              <animate attributeName="offset" values="0;1" dur="1.5s" repeatCount="indefinite" calcMode="linear" />
             </stop>
-            <stop offset="25%" stopColor="#fed7aa">
-              <animate attributeName="offset" values="-0.75;1.25" dur="2s" repeatCount="indefinite" />
+            <stop offset="5%" stopColor="#fcd34d">
+              <animate attributeName="offset" values="0.05;1.05" dur="1.5s" repeatCount="indefinite" calcMode="linear" />
             </stop>
-            <stop offset="50%" stopColor="transparent">
-              <animate attributeName="offset" values="-0.5;1.5" dur="2s" repeatCount="indefinite" />
+            <stop offset="15%" stopColor="#fcd34d">
+              <animate attributeName="offset" values="0.15;1.15" dur="1.5s" repeatCount="indefinite" calcMode="linear" />
             </stop>
-            <stop offset="75%" stopColor="#fed7aa">
-              <animate attributeName="offset" values="-0.25;1.75" dur="2s" repeatCount="indefinite" />
-            </stop>
-            <stop offset="100%" stopColor="transparent">
-              <animate attributeName="offset" values="0;2" dur="2s" repeatCount="indefinite" />
+            <stop offset="20%" stopColor="transparent">
+              <animate attributeName="offset" values="0.2;1.2" dur="1.5s" repeatCount="indefinite" calcMode="linear" />
             </stop>
           </linearGradient>
         </defs>
