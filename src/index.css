@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,57 +7,57 @@
 @layer base {
   :root {
     --background: 220 30% 6%;
-    --foreground: 40 15% 95%;
+    --foreground: 210 25% 95%;
 
     --card: 220 30% 9%;
-    --card-foreground: 40 15% 95%;
+    --card-foreground: 210 25% 95%;
 
     --popover: 220 30% 9%;
-    --popover-foreground: 40 15% 95%;
+    --popover-foreground: 210 25% 95%;
 
-    --primary: 38 65% 50%;
+    --primary: 210 60% 55%;
     --primary-foreground: 220 30% 6%;
 
     --secondary: 220 20% 14%;
-    --secondary-foreground: 40 15% 90%;
+    --secondary-foreground: 210 25% 90%;
 
     --muted: 220 20% 14%;
     --muted-foreground: 220 15% 55%;
 
-    --accent: 38 50% 45%;
+    --accent: 210 50% 50%;
     --accent-foreground: 220 30% 6%;
 
     --destructive: 0 70% 50%;
-    --destructive-foreground: 40 15% 95%;
+    --destructive-foreground: 210 25% 95%;
 
     --border: 220 20% 18%;
     --input: 220 20% 18%;
-    --ring: 38 65% 50%;
+    --ring: 210 60% 55%;
 
     --radius: 0.5rem;
 
-    /* Custom design tokens - refined academic palette */
-    --gold: 38 65% 50%;
-    --gold-muted: 38 40% 40%;
-    --gold-light: 40 60% 70%;
+    /* Custom design tokens - refined blue palette */
+    --blue: 210 60% 55%;
+    --blue-muted: 210 40% 45%;
+    --blue-light: 210 70% 70%;
     
-    --gradient-primary: linear-gradient(135deg, hsl(38 65% 50%) 0%, hsl(32 55% 45%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(210 60% 55%) 0%, hsl(220 55% 50%) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(220 30% 8%) 0%, hsl(220 30% 6%) 100%);
     
     --shadow-soft: 0 4px 24px hsl(220 30% 4% / 0.4);
     --shadow-card: 0 2px 12px hsl(220 30% 4% / 0.3);
     
-    --font-display: 'Libre Baskerville', Georgia, serif;
+    --font-display: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
 
     --sidebar-background: 220 30% 8%;
-    --sidebar-foreground: 40 15% 90%;
-    --sidebar-primary: 38 65% 50%;
+    --sidebar-foreground: 210 25% 90%;
+    --sidebar-primary: 210 60% 55%;
     --sidebar-primary-foreground: 220 30% 6%;
     --sidebar-accent: 220 20% 14%;
-    --sidebar-accent-foreground: 40 15% 90%;
+    --sidebar-accent-foreground: 210 25% 90%;
     --sidebar-border: 220 20% 18%;
-    --sidebar-ring: 38 65% 50%;
+    --sidebar-ring: 210 60% 55%;
   }
 }
 
@@ -105,6 +105,26 @@
   50% { transform: translateY(-8px); }
 }
 
+@keyframes draw-line {
+  0% { stroke-dashoffset: 1000; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes trace-path {
+  0% { stroke-dashoffset: 500; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes blink-dot {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
 .animate-fade-in-up {
   animation: fade-in-up 0.7s ease-out forwards;
 }
@@ -113,7 +133,28 @@
   animation: subtle-float 8s ease-in-out infinite;
 }
 
+.animate-draw-line {
+  stroke-dasharray: 1000;
+  animation: draw-line 4s ease-out forwards;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 4s ease-in-out infinite;
+}
+
+.animate-trace-path {
+  stroke-dasharray: 500;
+  animation: trace-path 3s ease-out forwards;
+}
+
+.animate-blink-dot {
+  animation: blink-dot 2s ease-in-out infinite;
+}
+
 .animation-delay-200 { animation-delay: 0.2s; }
 .animation-delay-400 { animation-delay: 0.4s; }
 .animation-delay-600 { animation-delay: 0.6s; }
 .animation-delay-800 { animation-delay: 0.8s; }
+.animation-delay-1000 { animation-delay: 1s; }
+.animation-delay-1500 { animation-delay: 1.5s; }
+.animation-delay-2000 { animation-delay: 2s; }

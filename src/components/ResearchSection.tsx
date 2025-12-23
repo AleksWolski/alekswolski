@@ -30,12 +30,12 @@ const ResearchSection = () => {
       <div className="container mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-20">
-          <p className="text-primary font-body font-medium mb-4 tracking-widest uppercase text-xs">
+          <p className="text-primary font-display font-medium mb-4 tracking-widest uppercase text-xs">
             Research Focus
           </p>
-          <h2 className="font-display text-3xl md:text-4xl mb-6">
+          <h2 className="font-display font-semibold text-3xl md:text-4xl mb-6">
             Exploring the Intersection of <br className="hidden md:block" />
-            <span className="text-gradient italic">Data & Dynamics</span>
+            <span className="text-gradient">Data & Dynamics</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             My research bridges the gap between classical control theory and modern 
@@ -53,7 +53,7 @@ const ResearchSection = () => {
               <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center mb-5">
                 <area.icon className="text-primary" size={20} />
               </div>
-              <h3 className="font-display text-lg mb-3">
+              <h3 className="font-display font-medium text-lg mb-3">
                 {area.title}
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
@@ -67,7 +67,7 @@ const ResearchSection = () => {
         <div className="max-w-4xl mx-auto p-8 md:p-10 rounded-lg bg-card border border-border">
           <div className="flex flex-col lg:flex-row items-center gap-10">
             <div className="flex-1">
-              <h3 className="font-display text-2xl mb-4">
+              <h3 className="font-display font-semibold text-2xl mb-4">
                 Continuous-Time LTI Systems
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-5">
@@ -91,22 +91,22 @@ const ResearchSection = () => {
             <div className="flex-1 flex justify-center">
               <svg viewBox="0 0 280 130" className="w-full max-w-xs">
                 <defs>
-                  <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-                    <polygon points="0 0, 8 3, 0 6" fill="hsl(38 65% 50%)" />
+                  <marker id="arrowhead2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                    <polygon points="0 0, 8 3, 0 6" fill="hsl(210 60% 55%)" />
                   </marker>
                 </defs>
                 
                 {/* Input arrow */}
-                <line x1="10" y1="65" x2="55" y2="65" stroke="hsl(38 65% 50%)" strokeWidth="1.5" markerEnd="url(#arrowhead)" />
-                <text x="32" y="55" fill="hsl(38 65% 50%)" fontSize="11" textAnchor="middle" fontFamily="monospace">u(t)</text>
+                <line x1="10" y1="65" x2="55" y2="65" stroke="hsl(210 60% 55%)" strokeWidth="1.5" markerEnd="url(#arrowhead2)" />
+                <text x="32" y="55" fill="hsl(210 60% 55%)" fontSize="11" textAnchor="middle" fontFamily="monospace">u(t)</text>
                 
                 {/* System block */}
                 <rect x="65" y="40" width="150" height="50" rx="4" fill="hsl(220 20% 14%)" stroke="hsl(220 20% 18%)" strokeWidth="1.5" />
-                <text x="140" y="70" fill="hsl(40 15% 95%)" fontSize="13" textAnchor="middle" fontFamily="var(--font-display)">LTI System</text>
+                <text x="140" y="70" fill="hsl(210 25% 95%)" fontSize="13" textAnchor="middle" fontFamily="var(--font-display)">LTI System</text>
                 
                 {/* Output arrow */}
-                <line x1="225" y1="65" x2="270" y2="65" stroke="hsl(38 65% 50%)" strokeWidth="1.5" markerEnd="url(#arrowhead)" />
-                <text x="248" y="55" fill="hsl(38 65% 50%)" fontSize="11" textAnchor="middle" fontFamily="monospace">y(t)</text>
+                <line x1="225" y1="65" x2="270" y2="65" stroke="hsl(210 60% 55%)" strokeWidth="1.5" markerEnd="url(#arrowhead2)" />
+                <text x="248" y="55" fill="hsl(210 60% 55%)" fontSize="11" textAnchor="middle" fontFamily="monospace">y(t)</text>
                 
                 {/* Feedback path */}
                 <path d="M235,65 L235,110 L45,110 L45,65" fill="none" stroke="hsl(220 20% 30%)" strokeWidth="1" strokeDasharray="4,4" />

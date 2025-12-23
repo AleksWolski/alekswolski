@@ -43,11 +43,11 @@ const PortfolioSection = () => {
       <div className="container mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
-          <p className="text-primary font-body font-medium mb-4 tracking-widest uppercase text-xs">
+          <p className="text-primary font-display font-medium mb-4 tracking-widest uppercase text-xs">
             Publications
           </p>
-          <h2 className="font-display text-3xl md:text-4xl mb-6">
-            Selected <span className="text-gradient italic">Research Work</span>
+          <h2 className="font-display font-semibold text-3xl md:text-4xl mb-6">
+            Selected <span className="text-gradient">Research Work</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             A selection of my published papers in top-tier journals and conferences 
@@ -73,7 +73,7 @@ const PortfolioSection = () => {
                     <span className="text-xs text-primary">{pub.journal}</span>
                   </div>
                   
-                  <h3 className="font-display text-lg md:text-xl mb-3 group-hover:text-primary transition-colors duration-200">
+                  <h3 className="font-display font-medium text-lg md:text-xl mb-3 group-hover:text-primary transition-colors duration-200">
                     {pub.title}
                   </h3>
                   
