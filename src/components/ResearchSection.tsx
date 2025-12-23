@@ -444,8 +444,18 @@ const ResearchSection = () => {
                     ) : index === 2 ? (
                       <MatrixDisplay />
                     ) : (
-                      <div className="py-6">
-                        <ArrowDown className="text-primary" size={28} />
+                      <div className="py-6 flex justify-center items-center">
+                        <svg width="10" height="54" viewBox="0 0 10 54" className="text-primary flex-shrink-0">
+                          <path d="M8 2 L3 2 L3 52 L8 52" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                        <div className="grid grid-cols-3 gap-x-3 gap-y-1 px-1">
+                          {Array.from({ length: 9 }).map((_, i) => (
+                            <span key={i} className="text-primary text-center text-base leading-4 w-4 h-4 flex items-center justify-center">•</span>
+                          ))}
+                        </div>
+                        <svg width="10" height="54" viewBox="0 0 10 54" className="text-primary flex-shrink-0">
+                          <path d="M2 2 L7 2 L7 52 L2 52" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
                       </div>
                     )
                   )}
