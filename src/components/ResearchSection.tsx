@@ -400,8 +400,6 @@ const MatrixDisplay = () => {
 };
 
 const MatrixWithCables = () => {
-  const cableColors = ['#fcd34d', '#f97316', '#22c55e'];
-  
   return (
     <div className="py-6 flex justify-center items-center relative">
       <svg 
@@ -411,30 +409,27 @@ const MatrixWithCables = () => {
         className="overflow-visible"
       >
         <defs>
-          {cableColors.map((color, i) => (
-            <linearGradient 
-              key={i}
-              id={`cableGradient${i}`} 
-              x1="0%" 
-              y1="0%" 
-              x2="100%" 
-              y2="0%" 
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop offset="0%" stopColor="transparent">
-                <animate attributeName="offset" values="-0.35;1" dur="2.5s" repeatCount="indefinite" calcMode="linear" begin={`${i * 0.3}s`} />
-              </stop>
-              <stop offset="5%" stopColor={color}>
-                <animate attributeName="offset" values="-0.30;1.05" dur="2.5s" repeatCount="indefinite" calcMode="linear" begin={`${i * 0.3}s`} />
-              </stop>
-              <stop offset="30%" stopColor={color}>
-                <animate attributeName="offset" values="-0.05;1.30" dur="2.5s" repeatCount="indefinite" calcMode="linear" begin={`${i * 0.3}s`} />
-              </stop>
-              <stop offset="35%" stopColor="transparent">
-                <animate attributeName="offset" values="0;1.35" dur="2.5s" repeatCount="indefinite" calcMode="linear" begin={`${i * 0.3}s`} />
-              </stop>
-            </linearGradient>
-          ))}
+          <linearGradient 
+            id="cableBundleGradient" 
+            x1="0%" 
+            y1="0%" 
+            x2="100%" 
+            y2="0%" 
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0%" stopColor="transparent">
+              <animate attributeName="offset" values="-0.35;1" dur="2.5s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+            </stop>
+            <stop offset="5%" stopColor="#fcd34d">
+              <animate attributeName="offset" values="-0.30;1.05" dur="2.5s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+            </stop>
+            <stop offset="30%" stopColor="#fcd34d">
+              <animate attributeName="offset" values="-0.05;1.30" dur="2.5s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+            </stop>
+            <stop offset="35%" stopColor="transparent">
+              <animate attributeName="offset" values="0;1.35" dur="2.5s" repeatCount="indefinite" calcMode="linear" begin="0s" />
+            </stop>
+          </linearGradient>
         </defs>
         
         {/* Matrix - centered */}
@@ -457,16 +452,16 @@ const MatrixWithCables = () => {
           <path d="M72 2 L77 2 L77 52 L72 52" stroke="hsl(var(--primary))" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
         </g>
         
-        {/* Animated cables coming out from right side of matrix, curving down */}
-        {cableColors.map((_, i) => {
-          const startY = 47 + (i - 1) * 14; // Spread from matrix rows
-          const endX = 230;
+        {/* Animated cable bundle - 3 yellow cables moving together */}
+        {[0, 1, 2].map((i) => {
+          const startY = 47 + (i - 1) * 8; // Tighter bundle spacing
           const endY = 110;
+          const endX = 225 + (i - 1) * 5; // Slight spread at end
           return (
             <path
               key={i}
-              d={`M187 ${startY} C 210 ${startY}, 230 ${startY + 20}, ${endX} ${endY}`}
-              stroke={`url(#cableGradient${i})`}
+              d={`M187 ${startY} C 210 ${startY}, 225 ${startY + 25}, ${endX} ${endY}`}
+              stroke="url(#cableBundleGradient)"
               strokeWidth="3"
               fill="none"
               strokeLinecap="round"
