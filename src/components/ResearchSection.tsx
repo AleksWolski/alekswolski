@@ -141,10 +141,10 @@ const TripleSinusoid = () => {
             <stop offset="0%" stopColor="transparent">
               <animate attributeName="offset" values="-0.35;1" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
             </stop>
-            <stop offset="5%" stopColor="#ea580c">
+            <stop offset="5%" stopColor="#b45309">
               <animate attributeName="offset" values="-0.30;1.05" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
             </stop>
-            <stop offset="30%" stopColor="#ea580c">
+            <stop offset="30%" stopColor="#b45309">
               <animate attributeName="offset" values="-0.05;1.30" dur="3s" repeatCount="indefinite" calcMode="linear" begin="0s" />
             </stop>
             <stop offset="35%" stopColor="transparent">
