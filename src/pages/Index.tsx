@@ -6,10 +6,12 @@ import ResearchSection from '@/components/ResearchSection';
 import PortfolioSection from '@/components/PortfolioSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import TrackingAnimation from '@/components/TrackingAnimation';
 
 const Index = () => {
   return (
     <main className="min-h-screen bg-background">
+      <TrackingAnimation />
       <Navigation />
       <HeroSection />
       <AboutSection />
