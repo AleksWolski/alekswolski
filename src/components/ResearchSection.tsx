@@ -8,7 +8,7 @@ const flowchartSteps = [
   "Data Matrix",
   <>
     Characterisation of all <span className="text-red-500 font-semibold">Input</span>-
-    <span className="text-blue-500 font-semibold">Output</span> Trajectories of the System
+    <span className="text-gradient">Output</span> Trajectories of the System
   </>,
 ];
 
