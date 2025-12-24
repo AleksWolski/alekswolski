@@ -1286,11 +1286,11 @@ const ResearchSection = () => {
         {/* Research block */}
         <div className="mb-20">
           <div className="group p-10 md:p-14 rounded-lg bg-card border border-border hover:border-primary/30 transition-all duration-300">
-            <h3 className="font-display font-medium text-2xl md:text-3xl mb-5">Data-Driven Simulation</h3>
+            {/*<h3 className="font-display font-medium text-2xl md:text-3xl mb-5">Data-Driven Simulation</h3>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-12">
               Developing methods to simulate system behavior directly from measured data without explicit model
               identification.
-            </p>
+            </p>*/}
 
             {/* Flowchart */}
             <div className="flex flex-col items-center">
