@@ -1285,7 +1285,7 @@ const ResearchSection = () => {
 
         {/* Research block */}
         <div className="mb-20">
-          <div className="group p-10 md:p-14 rounded-lg bg-card/25 border border-border/25 hover:border-primary/30 transition-all duration-300">
+          <div className="group w-fit p-8 md:p-10 rounded-lg bg-card/20 border border-border/25 hover:border-primary/30 transition-all duration-300">
             {" "}
             {/*<h3 className="font-display font-medium text-2xl md:text-3xl mb-5">Data-Driven Simulation</h3>
             <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mb-12">
