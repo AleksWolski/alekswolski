@@ -1295,7 +1295,7 @@ const ResearchSection = () => {
             {/* Flowchart */}
             <div className="flex flex-col items-center">
               {flowchartSteps.map((step, index) => (
-                <React.Fragment key={step}>
+                <React.Fragment key={index}>
                   <div className="w-full max-w-md px-6 py-4 bg-primary/10 border border-primary/20 rounded-lg text-center">
                     <span className="text-foreground font-medium text-sm md:text-base">{step}</span>
                   </div>
