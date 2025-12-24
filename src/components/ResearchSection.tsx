@@ -875,7 +875,7 @@ const MatrixWithCables = () => {
               <stop offset="0%" stopColor="transparent">
                 <animate
                   attributeName="offset"
-                  values="-0.35;0.65"
+                  values="-0.35;1.0"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -885,7 +885,7 @@ const MatrixWithCables = () => {
               <stop offset="5%" stopColor="#f87171">
                 <animate
                   attributeName="offset"
-                  values="-0.30;0.70"
+                  values="-0.30;1.05"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -895,7 +895,7 @@ const MatrixWithCables = () => {
               <stop offset="30%" stopColor="#f87171">
                 <animate
                   attributeName="offset"
-                  values="-0.05;0.95"
+                  values="-0.05;1.30"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -905,7 +905,7 @@ const MatrixWithCables = () => {
               <stop offset="35%" stopColor="transparent">
                 <animate
                   attributeName="offset"
-                  values="0;1"
+                  values="0;1.35"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -917,7 +917,7 @@ const MatrixWithCables = () => {
               <stop offset="0%" stopColor="transparent">
                 <animate
                   attributeName="offset"
-                  values="-0.35;0.65"
+                  values="-0.35;1.0"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -927,7 +927,7 @@ const MatrixWithCables = () => {
               <stop offset="5%" stopColor="#ef4444">
                 <animate
                   attributeName="offset"
-                  values="-0.30;0.70"
+                  values="-0.30;1.05"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -937,7 +937,7 @@ const MatrixWithCables = () => {
               <stop offset="30%" stopColor="#ef4444">
                 <animate
                   attributeName="offset"
-                  values="-0.05;0.95"
+                  values="-0.05;1.30"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -947,7 +947,7 @@ const MatrixWithCables = () => {
               <stop offset="35%" stopColor="transparent">
                 <animate
                   attributeName="offset"
-                  values="0;1"
+                  values="0;1.35"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -959,7 +959,7 @@ const MatrixWithCables = () => {
               <stop offset="0%" stopColor="transparent">
                 <animate
                   attributeName="offset"
-                  values="-0.35;0.65"
+                  values="-0.35;1.0"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -969,7 +969,7 @@ const MatrixWithCables = () => {
               <stop offset="5%" stopColor="#dc2626">
                 <animate
                   attributeName="offset"
-                  values="-0.30;0.70"
+                  values="-0.30;1.05"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -979,7 +979,7 @@ const MatrixWithCables = () => {
               <stop offset="30%" stopColor="#dc2626">
                 <animate
                   attributeName="offset"
-                  values="-0.05;0.95"
+                  values="-0.05;1.30"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -989,7 +989,7 @@ const MatrixWithCables = () => {
               <stop offset="35%" stopColor="transparent">
                 <animate
                   attributeName="offset"
-                  values="0;1"
+                  values="0;1.35"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -1030,7 +1030,7 @@ const MatrixWithCables = () => {
               <stop offset="0%" stopColor="transparent">
                 <animate
                   attributeName="offset"
-                  values="-0.35;0.65"
+                  values="-0.35;1.0"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -1040,7 +1040,7 @@ const MatrixWithCables = () => {
               <stop offset="5%" stopColor="#60a5fa">
                 <animate
                   attributeName="offset"
-                  values="-0.30;0.70"
+                  values="-0.30;1.05"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -1050,7 +1050,7 @@ const MatrixWithCables = () => {
               <stop offset="30%" stopColor="#60a5fa">
                 <animate
                   attributeName="offset"
-                  values="-0.05;0.95"
+                  values="-0.05;1.30"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -1060,7 +1060,7 @@ const MatrixWithCables = () => {
               <stop offset="35%" stopColor="transparent">
                 <animate
                   attributeName="offset"
-                  values="0;1"
+                  values="0;1.35"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -1072,7 +1072,7 @@ const MatrixWithCables = () => {
               <stop offset="0%" stopColor="transparent">
                 <animate
                   attributeName="offset"
-                  values="-0.35;0.65"
+                  values="-0.35;1.0"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -1082,7 +1082,7 @@ const MatrixWithCables = () => {
               <stop offset="5%" stopColor="#3b82f6">
                 <animate
                   attributeName="offset"
-                  values="-0.30;0.70"
+                  values="-0.30;1.05"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -1092,7 +1092,7 @@ const MatrixWithCables = () => {
               <stop offset="30%" stopColor="#3b82f6">
                 <animate
                   attributeName="offset"
-                  values="-0.05;0.95"
+                  values="-0.05;1.30"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -1102,7 +1102,7 @@ const MatrixWithCables = () => {
               <stop offset="35%" stopColor="transparent">
                 <animate
                   attributeName="offset"
-                  values="0;1"
+                  values="0;1.35"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -1114,7 +1114,7 @@ const MatrixWithCables = () => {
               <stop offset="0%" stopColor="transparent">
                 <animate
                   attributeName="offset"
-                  values="-0.35;0.65"
+                  values="-0.35;1.0"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -1124,7 +1124,7 @@ const MatrixWithCables = () => {
               <stop offset="5%" stopColor="#2563eb">
                 <animate
                   attributeName="offset"
-                  values="-0.30;0.70"
+                  values="-0.30;1.05"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -1134,7 +1134,7 @@ const MatrixWithCables = () => {
               <stop offset="30%" stopColor="#2563eb">
                 <animate
                   attributeName="offset"
-                  values="-0.05;0.95"
+                  values="-0.05;1.30"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -1144,7 +1144,7 @@ const MatrixWithCables = () => {
               <stop offset="35%" stopColor="transparent">
                 <animate
                   attributeName="offset"
-                  values="0;1"
+                  values="0;1.35"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -1156,7 +1156,7 @@ const MatrixWithCables = () => {
               <stop offset="0%" stopColor="transparent">
                 <animate
                   attributeName="offset"
-                  values="-0.35;0.65"
+                  values="-0.35;1.0"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -1166,7 +1166,7 @@ const MatrixWithCables = () => {
               <stop offset="5%" stopColor="#1d4ed8">
                 <animate
                   attributeName="offset"
-                  values="-0.30;0.70"
+                  values="-0.30;1.05"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -1176,7 +1176,7 @@ const MatrixWithCables = () => {
               <stop offset="30%" stopColor="#1d4ed8">
                 <animate
                   attributeName="offset"
-                  values="-0.05;0.95"
+                  values="-0.05;1.30"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -1186,7 +1186,7 @@ const MatrixWithCables = () => {
               <stop offset="35%" stopColor="transparent">
                 <animate
                   attributeName="offset"
-                  values="0;1"
+                  values="0;1.35"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -1198,7 +1198,7 @@ const MatrixWithCables = () => {
               <stop offset="0%" stopColor="transparent">
                 <animate
                   attributeName="offset"
-                  values="-0.35;0.65"
+                  values="-0.35;1.0"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -1208,7 +1208,7 @@ const MatrixWithCables = () => {
               <stop offset="5%" stopColor="#1e40af">
                 <animate
                   attributeName="offset"
-                  values="-0.30;0.70"
+                  values="-0.30;1.05"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -1218,7 +1218,7 @@ const MatrixWithCables = () => {
               <stop offset="30%" stopColor="#1e40af">
                 <animate
                   attributeName="offset"
-                  values="-0.05;0.95"
+                  values="-0.05;1.30"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
@@ -1228,7 +1228,7 @@ const MatrixWithCables = () => {
               <stop offset="35%" stopColor="transparent">
                 <animate
                   attributeName="offset"
-                  values="0;1"
+                  values="0;1.35"
                   dur="2s"
                   repeatCount="indefinite"
                   calcMode="linear"
