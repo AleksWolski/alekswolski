@@ -6,7 +6,7 @@ const flowchartSteps = [
   "Linear Time-Invariant Continuous-Time System",
   "Sufficiently Informative Input-Output Trajectory",
   "Data Matrix",
-  'Characterisation of all <span className="text-gradient">Input</span>-Output Trajectories of the System',
+  "Characterisation of all Input-Output Trajectories of the System",
 ];
 
 const AnimatedSinusoid = ({
